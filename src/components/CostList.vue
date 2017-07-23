@@ -2,11 +2,18 @@
   <div class="cost-list phone-viewport">
     <h1>Cost for {{ driving }} minutes of driving, {{ parking }} minutes of parking</h1>
 
-    <md-list class="tariffs">
-      <md-list-item v-for="tariff in tariffs">
-        <span>{{ tariff.totalCost | currency }}</span>
-      </md-list-item>
-    </md-list>
+    <md-table class="tariffs">
+      <md-table-body>
+        <md-table-row v-for="tariff in tariffs">
+          <md-table-cell>
+            {{ tariff.name }}
+          </md-table-cell>
+          <md-table-cell>
+            {{ tariff.totalCost | currency }}
+          </md-table-cell>
+        </md-table-row>
+      </md-table-body>
+    </md-table>
   </div>
 </template>
 

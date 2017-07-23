@@ -8,6 +8,7 @@ const Calculator = {
   tariffs: {
     car2go: {
       smart: {
+        name: 'car2go Smart',
         drivingPerMinute: 0.24,
         parkingPerMinute: 0.19,
         calculateCost: defaultCostCalculation,
@@ -15,11 +16,13 @@ const Calculator = {
     },
     driveNow: {
       mini: {
+        name: 'DriveNow Mini',
         drivingPerMinute: 0.31,
         parkingPerMinute: 0.15,
         calculateCost: defaultCostCalculation,
       },
       bmw2: {
+        name: 'DriveNow BMW 2er',
         drivingPerMinute: 0.34,
         parkingPerMinute: 0.15,
         calculateCost: defaultCostCalculation,
