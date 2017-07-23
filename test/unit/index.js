@@ -1,5 +1,9 @@
 import Vue from 'vue';
 
+const VueMaterial = require('vue-material');
+
+Vue.use(VueMaterial);
+
 Vue.config.productionTip = false;
 
 // require all test files (files that ends with .spec.js)
