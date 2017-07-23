@@ -5,18 +5,29 @@
     </header>
     <main>
       <img src="./assets/logo.png" alt="Vue.js PWA">
-      <hello></hello>
+      <input v-model="driving" />
+      <input v-model="parking" />
+      <cost-list v-bind:driving="driving" v-bind:parking="parking"></cost-list>
     </main>
   </div>
 </template>
 
 <script>
 import Hello from './components/Hello';
+import CostList from './components/CostList';
+
 
 export default {
   name: 'app',
+  data() {
+    return {
+      driving: 10,
+      parking: 5,
+    };
+  },
   components: {
     Hello,
+    CostList,
   },
 };
 </script>
