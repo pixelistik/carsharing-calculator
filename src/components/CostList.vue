@@ -1,13 +1,12 @@
 <template>
-  <div class="cost-list">
+  <div class="cost-list phone-viewport">
     <h1>Cost for {{ driving }} minutes of driving, {{ parking }} minutes of parking</h1>
 
-
-    <ul>
-      <li v-for="tariff in tariffs">
-        {{ tariff.totalCost }}
-      </li>
-    </ul>
+    <md-list>
+      <md-list-item v-for="tariff in tariffs">
+        <span>{{ tariff.totalCost }}</span>
+      </md-list-item>
+    </md-list>
   </div>
 </template>
 
@@ -36,14 +35,6 @@ export default {
 <style>
 h1, h2 {
   font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
 }
 
 a {
