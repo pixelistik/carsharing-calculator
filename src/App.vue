@@ -1,10 +1,9 @@
 <template>
   <div id="app">
     <header>
-      <span>Vue.js PWA</span>
+      <span>Carsharing Calculator</span>
     </header>
     <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
       <input v-model="driving" />
       <input v-model="parking" />
       <cost-list v-bind:driving="driving" v-bind:parking="parking"></cost-list>
@@ -13,9 +12,7 @@
 </template>
 
 <script>
-import Hello from './components/Hello';
 import CostList from './components/CostList';
-
 
 export default {
   name: 'app',
@@ -26,7 +23,6 @@ export default {
     };
   },
   components: {
-    Hello,
     CostList,
   },
 };
