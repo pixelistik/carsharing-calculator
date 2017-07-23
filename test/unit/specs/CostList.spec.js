@@ -6,12 +6,15 @@ describe('CostList.vue', () => {
     const Constructor = Vue.extend(CostList);
     const vm = new Constructor({
       propsData: {
-        driving: 10,
-        parking: 5,
+        driving: 1,
+        parking: 1,
       },
     }).$mount();
+
     expect(vm.$el.querySelector('.cost-list h1').textContent).to.equal(
-      'Cost for 10 minutes of driving, 5 minutes of parking',
+      'Cost for 1 minutes of driving, 1 minutes of parking',
     );
+
+    expect(vm.$el.querySelectorAll('.tariffs li')[0].textContent).to.contain('0,43 €');
   });
 });

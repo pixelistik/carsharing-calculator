@@ -2,9 +2,9 @@
   <div class="cost-list phone-viewport">
     <h1>Cost for {{ driving }} minutes of driving, {{ parking }} minutes of parking</h1>
 
-    <md-list>
+    <md-list class="tariffs">
       <md-list-item v-for="tariff in tariffs">
-        <span>{{ tariff.totalCost }}</span>
+        <span>{{ tariff.totalCost | currency }}</span>
       </md-list-item>
     </md-list>
   </div>
@@ -26,6 +26,14 @@ export default {
   computed: {
     tariffs() {
       return calculator.calculateAllCosts(this.driving, this.parking);
+    },
+  },
+  filters: {
+    currency(value) {
+      const formattedNumber = value
+        .toFixed(2)
+        .replace('.', ',');
+      return `${formattedNumber} €`;
     },
   },
 };
