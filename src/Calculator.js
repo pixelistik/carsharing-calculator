@@ -34,6 +34,18 @@ const Calculator = {
         parkingPerMinute: 0.19,
         calculateCost: defaultCostCalculation,
       },
+      aklasse: {
+        name: 'car2go A-Klasse',
+        drivingPerMinute: 0.31,
+        parkingPerMinute: 0.19,
+        calculateCost: defaultCostCalculation,
+      },
+      clagla: {
+        name: 'car2go CLA/GLA',
+        drivingPerMinute: 0.34,
+        parkingPerMinute: 0.19,
+        calculateCost: defaultCostCalculation,
+      },
     },
     driveNow: {
       mini: {
