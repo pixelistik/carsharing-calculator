@@ -1,7 +1,7 @@
 const _ = require('lodash');
 
 const defaultCostCalculation = function defaultCostCalculation(driving, parking) {
-  return (this.drivingPerMinute * driving) + (this.parkingPerMinute * parking);
+  return this.rentalFee + (this.drivingPerMinute * driving) + (this.parkingPerMinute * parking);
 };
 
 const defaultHourlyPackageCalculation = function defaultHourlyPackageCalculation(driving, parking) {
@@ -20,7 +20,8 @@ const defaultHourlyPackageCalculation = function defaultHourlyPackageCalculation
     parkingExceedingPackage = -1 * packageBudget;
   }
 
-  return this.packagePrice +
+  return this.rentalFee +
+    this.packagePrice +
     (this.drivingPerMinute * drivingExceedingPackage) +
     (this.parkingPerMinute * parkingExceedingPackage);
 };
@@ -32,18 +33,21 @@ const Calculator = {
         name: 'car2go Smart',
         drivingPerMinute: 0.24,
         parkingPerMinute: 0.19,
+        rentalFee: 0,
         calculateCost: defaultCostCalculation,
       },
       aklasse: {
         name: 'car2go A-Klasse',
         drivingPerMinute: 0.31,
         parkingPerMinute: 0.19,
+        rentalFee: 0,
         calculateCost: defaultCostCalculation,
       },
       clagla: {
         name: 'car2go CLA/GLA',
         drivingPerMinute: 0.34,
         parkingPerMinute: 0.19,
+        rentalFee: 0,
         calculateCost: defaultCostCalculation,
       },
     },
@@ -52,12 +56,14 @@ const Calculator = {
         name: 'DriveNow Mini',
         drivingPerMinute: 0.31,
         parkingPerMinute: 0.15,
+        rentalFee: 1,
         calculateCost: defaultCostCalculation,
       },
       mini3hour: {
         name: 'DriveNow Mini 3 hour package',
         drivingPerMinute: 0.31,
         parkingPerMinute: 0.15,
+        rentalFee: 1,
         packagePrice: 29,
         packageBudget: 3 * 60,
         calculateCost: defaultHourlyPackageCalculation,
@@ -66,6 +72,7 @@ const Calculator = {
         name: 'DriveNow Mini 6 hour package',
         drivingPerMinute: 0.31,
         parkingPerMinute: 0.15,
+        rentalFee: 1,
         packagePrice: 54,
         packageBudget: 6 * 60,
         calculateCost: defaultHourlyPackageCalculation,
@@ -74,6 +81,7 @@ const Calculator = {
         name: 'DriveNow Mini 9 hour package',
         drivingPerMinute: 0.31,
         parkingPerMinute: 0.15,
+        rentalFee: 1,
         packagePrice: 79,
         packageBudget: 9 * 60,
         calculateCost: defaultHourlyPackageCalculation,
@@ -82,6 +90,7 @@ const Calculator = {
         name: 'DriveNow BMW 2er',
         drivingPerMinute: 0.34,
         parkingPerMinute: 0.15,
+        rentalFee: 1,
         calculateCost: defaultCostCalculation,
       },
     },

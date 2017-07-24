@@ -33,25 +33,30 @@ describe('Calculator', () => {
   });
 
   describe('DriveNow', () => {
+    it('should add the insurance fee of 1 EUR to the cost', () => {
+      const result = calculator.tariffs.driveNow.mini.calculateCost(1, 0);
+      expect(result).to.equal(1 + 0.31);
+    });
+
     describe('Hour Packages', () => {
       it('should apply the package price when the usage time is below the package time', () => {
         const result = calculator.tariffs.driveNow.mini3hour.calculateCost(10, 5);
-        expect(result).to.equal(29);
+        expect(result).to.equal(1 + 29);
       });
 
       it('should add minutes that are above the package driving time', () => {
         const result = calculator.tariffs.driveNow.mini3hour.calculateCost(181, 0);
-        expect(result).to.equal(29 + 0.31);
+        expect(result).to.equal(1 + 29 + 0.31);
       });
 
       it('should add parking minutes that are above the package driving time', () => {
         const result = calculator.tariffs.driveNow.mini3hour.calculateCost(180, 1);
-        expect(result).to.equal(29 + 0.15);
+        expect(result).to.equal(1 + 29 + 0.15);
       });
 
       it('should add driving and parking minutes that are above the package time', () => {
         const result = calculator.tariffs.driveNow.mini3hour.calculateCost(190, 10);
-        expect(result).to.equal(29 + (10 * 0.31) + (10 * 0.15));
+        expect(result).to.equal(1 + 29 + (10 * 0.31) + (10 * 0.15));
       });
     });
   });
