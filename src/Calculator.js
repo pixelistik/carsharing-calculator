@@ -53,7 +53,7 @@ const Calculator = {
     },
     driveNow: {
       mini: {
-        name: 'DriveNow Mini',
+        name: 'DriveNow Mini/BMW 1er',
         drivingPerMinute: 0.31,
         parkingPerMinute: 0.15,
         rentalFee: 1,
@@ -87,7 +87,7 @@ const Calculator = {
         calculateCost: defaultHourlyPackageCalculation,
       },
       bmw2: {
-        name: 'DriveNow BMW 2er',
+        name: 'DriveNow Mini Cabrio/BMW 2er',
         drivingPerMinute: 0.34,
         parkingPerMinute: 0.15,
         rentalFee: 1,
