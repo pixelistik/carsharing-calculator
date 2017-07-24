@@ -4,6 +4,27 @@ const defaultCostCalculation = function defaultCostCalculation(driving, parking)
   return (this.drivingPerMinute * driving) + (this.parkingPerMinute * parking);
 };
 
+const defaultHourlyPackageCalculation = function defaultHourlyPackageCalculation(driving, parking) {
+  let packageBudget = this.packageBudget;
+
+  packageBudget -= driving;
+  let drivingExceedingPackage = 0;
+  if (packageBudget < 0) {
+    drivingExceedingPackage = -1 * packageBudget;
+    packageBudget = 0;
+  }
+
+  packageBudget -= parking;
+  let parkingExceedingPackage = 0;
+  if (packageBudget < 0) {
+    parkingExceedingPackage = -1 * packageBudget;
+  }
+
+  return this.packagePrice +
+    (this.drivingPerMinute * drivingExceedingPackage) +
+    (this.parkingPerMinute * parkingExceedingPackage);
+};
+
 const Calculator = {
   tariffs: {
     car2go: {
@@ -26,26 +47,8 @@ const Calculator = {
         drivingPerMinute: 0.31,
         parkingPerMinute: 0.15,
         packagePrice: 29,
-        calculateCost: function calculateCost(driving, parking) {
-          let packageBudget = 180;
-
-          packageBudget -= driving;
-          let drivingExceedingPackage = 0;
-          if (packageBudget < 0) {
-            drivingExceedingPackage = -1 * packageBudget;
-            packageBudget = 0;
-          }
-
-          packageBudget -= parking;
-          let parkingExceedingPackage = 0;
-          if (packageBudget < 0) {
-            parkingExceedingPackage = -1 * packageBudget;
-          }
-
-          return this.packagePrice +
-            (this.drivingPerMinute * drivingExceedingPackage) +
-            (this.parkingPerMinute * parkingExceedingPackage);
-        },
+        packageBudget: 180,
+        calculateCost: defaultHourlyPackageCalculation,
       },
       bmw2: {
         name: 'DriveNow BMW 2er',
