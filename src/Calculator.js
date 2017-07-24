@@ -60,7 +60,7 @@ const Calculator = {
         calculateCost: defaultCostCalculation,
       },
       mini3hour: {
-        name: 'DriveNow Mini 3 hour package',
+        name: 'DriveNow Mini 3-Stunden-Paket',
         drivingPerMinute: 0.31,
         parkingPerMinute: 0.15,
         rentalFee: 1,
@@ -69,7 +69,7 @@ const Calculator = {
         calculateCost: defaultHourlyPackageCalculation,
       },
       mini6hour: {
-        name: 'DriveNow Mini 6 hour package',
+        name: 'DriveNow Mini 6-Stunden-Paket',
         drivingPerMinute: 0.31,
         parkingPerMinute: 0.15,
         rentalFee: 1,
@@ -78,7 +78,7 @@ const Calculator = {
         calculateCost: defaultHourlyPackageCalculation,
       },
       mini9hour: {
-        name: 'DriveNow Mini 9 hour package',
+        name: 'DriveNow Mini 9-Stunden-Paket',
         drivingPerMinute: 0.31,
         parkingPerMinute: 0.15,
         rentalFee: 1,

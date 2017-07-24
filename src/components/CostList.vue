@@ -1,7 +1,7 @@
 <template>
   <md-layout md-gutter class="cost-list">
     <md-layout md-flex="100">
-      <h1 class="md-headline">Cost for {{ driving }} minutes of driving, {{ parking }} minutes of parking</h1>
+      <h2 class="md-headline">{{ driving + parking }} Minuten unterwegs.</h2>
     </md-layout>
     <md-layout>
       <md-table class="tariffs">
@@ -51,11 +51,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-h1, h2 {
-  font-weight: normal;
-}
-
-a {
-  color: #35495E;
+.md-input-container label,
+.md-input-container input  {
+  margin-left: 24px;
 }
 </style>

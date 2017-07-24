@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <header>
-      <span>Carsharing Calculator</span>
+      <h1 class="md-headline">Carsharing-Preisvergleich</h1>
     </header>
     <main>
       <md-layout md-gutter>
         <form novalidate @submit.stop.prevent="submit">
           <md-input-container>
-            <label>Driving</label>
+            <label>Fahren</label>
             <md-input type="number" v-model="driving"></md-input>
           </md-input-container>
           <md-input-container>
-            <label>Parking</label>
+            <label>Parken</label>
             <md-input type="number" v-model="parking"></md-input>
           </md-input-container>
         </form>
@@ -41,5 +41,7 @@ export default {
 <style src="vue-material/dist/vue-material.css"></style>
 
 <style>
-
+.md-headline {
+  padding: 0 24px;
+}
 </style>
