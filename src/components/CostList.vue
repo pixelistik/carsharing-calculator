@@ -1,7 +1,7 @@
 <template>
   <md-layout md-gutter class="cost-list">
     <md-layout md-flex="100">
-      <h2 class="md-headline">{{ driving + parking }} Minuten unterwegs.</h2>
+      <h2 class="md-headline">Kosten:</h2>
     </md-layout>
     <md-layout>
       <md-table class="tariffs">
