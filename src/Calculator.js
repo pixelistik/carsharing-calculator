@@ -27,12 +27,19 @@ const Calculator = {
         parkingPerMinute: 0.15,
         packagePrice: 29,
         calculateCost: function calculateCost(driving, parking) {
-          const drivingExceedingPackage = _.clamp(driving - (3 * 60), 0, Infinity);
+          let packageBudget = 180;
 
+          packageBudget -= driving;
+          let drivingExceedingPackage = 0;
+          if (packageBudget < 0) {
+            drivingExceedingPackage = -1 * packageBudget;
+            packageBudget = 0;
+          }
+
+          packageBudget -= parking;
           let parkingExceedingPackage = 0;
-
-          if (drivingExceedingPackage === 0) {
-            parkingExceedingPackage = _.clamp((driving + parking) - (3 * 60), 0, Infinity);
+          if (packageBudget < 0) {
+            parkingExceedingPackage = -1 * packageBudget;
           }
 
           return this.packagePrice +

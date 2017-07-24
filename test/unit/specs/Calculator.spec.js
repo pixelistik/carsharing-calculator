@@ -50,6 +50,11 @@ describe('Calculator', () => {
         const result = calculator.tariffs.driveNow.mini3hour.calculateCost(180, 1);
         expect(result).to.equal(29 + 0.15);
       });
+
+      it('should add driving and parking minutes that are above the package time', () => {
+        const result = calculator.tariffs.driveNow.mini3hour.calculateCost(190, 10);
+        expect(result).to.equal(29 + (10 * 0.31) + (10 * 0.15));
+      });
     });
   });
 });
