@@ -21,6 +21,17 @@ const Calculator = {
         parkingPerMinute: 0.15,
         calculateCost: defaultCostCalculation,
       },
+      mini3hour: {
+        name: 'DriveNow Mini 3 hour package',
+        drivingPerMinute: 0.31,
+        parkingPerMinute: 0.15,
+        packagePrice: 29,
+        calculateCost: function calculateCost(driving) {
+          const drivingExceedingPackage = _.clamp(driving - (3 * 60), 0, Infinity);
+          return this.packagePrice +
+            (this.drivingPerMinute * drivingExceedingPackage);
+        },
+      },
       bmw2: {
         name: 'DriveNow BMW 2er',
         drivingPerMinute: 0.34,
