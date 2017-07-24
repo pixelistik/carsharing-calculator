@@ -48,7 +48,7 @@ const Calculator = {
       return tariffWithCost;
     });
 
-    return _.sortBy(costs, ['cost']);
+    return _.sortBy(costs, ['totalCost']);
   },
 };
 
