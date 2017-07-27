@@ -13,7 +13,7 @@
     "unit:watch": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit/specs",
-    "deploy": "npm run build && now --public dist/ && now alias"
+    "deploy": "npm run build && now dist/ --public && now alias"
   },
   "now": {
       "alias": "carsharing-calculator"
