@@ -133,6 +133,17 @@ const Calculator = {
         calculateCost: defaultCostCalculation,
       },
     },
+    flinkster: {
+      mini: {
+        name: 'Flinkster "Mini" (Smart, Panda)',
+        drivingPerMinute: 2.30 / 60,
+        parkingPerMinute: 2.30 / 60,
+        includedKilometers: 0,
+        extraKilometer: 0.18,
+        rentalFee: 0,
+        calculateCost: defaultCostCalculation,
+      },
+    },
   },
   calculateAllCosts: function calculateAllCosts(driving, parking, kilometers) {
     const tariffs = [];
@@ -145,6 +156,11 @@ const Calculator = {
     keys = Object.keys(this.tariffs.driveNow);
     keys.forEach((key) => {
       tariffs.push(this.tariffs.driveNow[key]);
+    });
+
+    keys = Object.keys(this.tariffs.flinkster);
+    keys.forEach((key) => {
+      tariffs.push(this.tariffs.flinkster[key]);
     });
 
     const costs = tariffs.map((tariff) => {
