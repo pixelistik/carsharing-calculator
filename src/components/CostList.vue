@@ -43,7 +43,8 @@ export default {
       const formattedNumber = value
         .toFixed(2)
         .replace('.', ',');
-      return `${formattedNumber} €`;
+      // eslint-disable-next-line no-irregular-whitespace
+      return `${formattedNumber} €`; // Unicode NBSP
     },
   },
 };
