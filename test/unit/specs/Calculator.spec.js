@@ -15,7 +15,7 @@ describe('Calculator', () => {
   it('should list all the tariffs', () => {
     const result = calculator.calculateAllCosts(1, 0);
 
-    expect(result).to.have.length(8);
+    expect(result).to.have.length(10);
     expect(result[0].totalCost).to.equal(0.24);
     expect(result[1].totalCost).to.equal(0.31);
   });

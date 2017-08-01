@@ -86,6 +86,15 @@ const Calculator = {
         rentalFee: 1,
         calculateCost: defaultCostCalculation,
       },
+      minidrivensave: {
+        name: "DriveNow Mini/BMW 1er Drive'n Save",
+        drivingPerMinute: 0.20,
+        parkingPerMinute: 0.15,
+        includedKilometers: 200,
+        extraKilometer: 0.29,
+        rentalFee: 1,
+        calculateCost: defaultCostCalculation,
+      },
       mini3hour: {
         name: 'DriveNow Mini 3-Stunden-Paket',
         drivingPerMinute: 0.31,
@@ -122,6 +131,15 @@ const Calculator = {
       bmw2: {
         name: 'DriveNow Mini Cabrio/BMW 2er',
         drivingPerMinute: 0.34,
+        parkingPerMinute: 0.15,
+        includedKilometers: 200,
+        extraKilometer: 0.29,
+        rentalFee: 1,
+        calculateCost: defaultCostCalculation,
+      },
+      bmw2drivensave: {
+        name: "DriveNow Mini Cabrio/BMW 2er Drive'n Save",
+        drivingPerMinute: 0.24,
         parkingPerMinute: 0.15,
         includedKilometers: 200,
         extraKilometer: 0.29,
