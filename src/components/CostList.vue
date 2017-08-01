@@ -27,7 +27,7 @@ const calculator = Object.create(Calculator);
 
 export default {
   name: 'cost-list',
-  props: ['driving', 'parking'],
+  props: ['driving', 'parking', 'kilometers'],
   data() {
     return {
       msg: 'Welcome to Your Vue.js PWA',
@@ -35,7 +35,7 @@ export default {
   },
   computed: {
     tariffs() {
-      return calculator.calculateAllCosts(this.driving, this.parking);
+      return calculator.calculateAllCosts(this.driving, this.parking, this.kilometers);
     },
   },
   filters: {

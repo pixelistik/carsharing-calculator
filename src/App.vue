@@ -14,9 +14,13 @@
             <label>Parken</label>
             <md-input type="number" v-model="parking"></md-input>
           </md-input-container>
+          <md-input-container>
+            <label>Kilometer</label>
+            <md-input type="number" v-model="kilometers"></md-input>
+          </md-input-container>
         </form>
       </md-layout>
-      <cost-list v-bind:driving="driving" v-bind:parking="parking"></cost-list>
+      <cost-list v-bind:driving="driving" v-bind:parking="parking" v-bind:kilometers="kilometers"></cost-list>
     </main>
   </div>
 </template>
@@ -30,6 +34,7 @@ export default {
     return {
       driving: 10,
       parking: 5,
+      kilometers: 200,
     };
   },
   components: {
