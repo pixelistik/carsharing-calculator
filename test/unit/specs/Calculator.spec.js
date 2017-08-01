@@ -30,6 +30,13 @@ describe('Calculator', () => {
       const result = calculator.tariffs.car2go.smart.calculateCost(10, 5);
       expect(result).to.equal((0.24 * 10) + (0.19 * 5));
     });
+
+    describe('Distance fees', () => {
+      it('should add the cost for kilometers that exceed the included 200 km', () => {
+        const result = calculator.tariffs.car2go.smart.calculateCost(10, 0, 203);
+        expect(result).to.equal((0.24 * 10) + (0.29 * 3));
+      });
+    });
   });
 
   describe('DriveNow', () => {

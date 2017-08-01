@@ -1,10 +1,21 @@
 const _ = require('lodash');
 
-const defaultCostCalculation = function defaultCostCalculation(driving, parking) {
-  return this.rentalFee + (this.drivingPerMinute * driving) + (this.parkingPerMinute * parking);
+const defaultCostCalculation = function defaultCostCalculation(driving, parking, kilometers) {
+  let includedKilometersBudget = this.includedKilometers;
+  includedKilometersBudget -= kilometers;
+  let kilometersExceedingIncluded = 0;
+  if (includedKilometersBudget < 0) {
+    kilometersExceedingIncluded = -1 * includedKilometersBudget;
+  }
+
+  return this.rentalFee +
+    (this.drivingPerMinute * driving) +
+    (this.parkingPerMinute * parking) +
+    (this.extraKilometer * kilometersExceedingIncluded);
 };
 
-const defaultHourlyPackageCalculation = function defaultHourlyPackageCalculation(driving, parking) {
+const defaultHourlyPackageCalculation =
+function defaultHourlyPackageCalculation(driving, parking, kilometers) {
   let packageBudget = this.packageBudget;
 
   packageBudget -= driving;
@@ -20,10 +31,18 @@ const defaultHourlyPackageCalculation = function defaultHourlyPackageCalculation
     parkingExceedingPackage = -1 * packageBudget;
   }
 
+  let includedKilometersBudget = this.includedKilometers;
+  includedKilometersBudget -= kilometers;
+  let kilometersExceedingIncluded = 0;
+  if (includedKilometersBudget < 0) {
+    kilometersExceedingIncluded = -1 * includedKilometersBudget;
+  }
+
   return this.rentalFee +
     this.packagePrice +
     (this.drivingPerMinute * drivingExceedingPackage) +
-    (this.parkingPerMinute * parkingExceedingPackage);
+    (this.parkingPerMinute * parkingExceedingPackage) +
+    (this.extraKilometer * kilometersExceedingIncluded);
 };
 
 const Calculator = {
@@ -33,6 +52,8 @@ const Calculator = {
         name: 'car2go Smart',
         drivingPerMinute: 0.24,
         parkingPerMinute: 0.19,
+        includedKilometers: 200,
+        extraKilometer: 0.29,
         rentalFee: 0,
         calculateCost: defaultCostCalculation,
       },
@@ -40,6 +61,8 @@ const Calculator = {
         name: 'car2go A-Klasse',
         drivingPerMinute: 0.31,
         parkingPerMinute: 0.19,
+        includedKilometers: 200,
+        extraKilometer: 0.29,
         rentalFee: 0,
         calculateCost: defaultCostCalculation,
       },
@@ -47,6 +70,8 @@ const Calculator = {
         name: 'car2go CLA/GLA',
         drivingPerMinute: 0.34,
         parkingPerMinute: 0.19,
+        includedKilometers: 200,
+        extraKilometer: 0.29,
         rentalFee: 0,
         calculateCost: defaultCostCalculation,
       },
@@ -56,6 +81,8 @@ const Calculator = {
         name: 'DriveNow Mini/BMW 1er',
         drivingPerMinute: 0.31,
         parkingPerMinute: 0.15,
+        includedKilometers: 200,
+        extraKilometer: 0.29,
         rentalFee: 1,
         calculateCost: defaultCostCalculation,
       },
@@ -63,6 +90,8 @@ const Calculator = {
         name: 'DriveNow Mini 3-Stunden-Paket',
         drivingPerMinute: 0.31,
         parkingPerMinute: 0.15,
+        includedKilometers: 200,
+        extraKilometer: 0.29,
         rentalFee: 1,
         packagePrice: 29,
         packageBudget: 3 * 60,
@@ -72,6 +101,8 @@ const Calculator = {
         name: 'DriveNow Mini 6-Stunden-Paket',
         drivingPerMinute: 0.31,
         parkingPerMinute: 0.15,
+        includedKilometers: 200,
+        extraKilometer: 0.29,
         rentalFee: 1,
         packagePrice: 54,
         packageBudget: 6 * 60,
@@ -81,6 +112,8 @@ const Calculator = {
         name: 'DriveNow Mini 9-Stunden-Paket',
         drivingPerMinute: 0.31,
         parkingPerMinute: 0.15,
+        includedKilometers: 200,
+        extraKilometer: 0.29,
         rentalFee: 1,
         packagePrice: 79,
         packageBudget: 9 * 60,
@@ -90,12 +123,14 @@ const Calculator = {
         name: 'DriveNow Mini Cabrio/BMW 2er',
         drivingPerMinute: 0.34,
         parkingPerMinute: 0.15,
+        includedKilometers: 200,
+        extraKilometer: 0.29,
         rentalFee: 1,
         calculateCost: defaultCostCalculation,
       },
     },
   },
-  calculateAllCosts: function calculateAllCosts(driving, parking) {
+  calculateAllCosts: function calculateAllCosts(driving, parking, kilometers) {
     const tariffs = [];
 
     let keys = Object.keys(this.tariffs.car2go);
@@ -110,7 +145,7 @@ const Calculator = {
 
     const costs = tariffs.map((tariff) => {
       const tariffWithCost = tariff;
-      tariffWithCost.totalCost = tariff.calculateCost(driving, parking);
+      tariffWithCost.totalCost = tariff.calculateCost(driving, parking, kilometers);
       return tariffWithCost;
     });
 
