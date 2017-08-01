@@ -1,22 +1,8 @@
 const _ = require('lodash');
 
-const defaultCostCalculation = function defaultCostCalculation(driving, parking, kilometers) {
-  let includedKilometersBudget = this.includedKilometers;
-  includedKilometersBudget -= kilometers;
-  let kilometersExceedingIncluded = 0;
-  if (includedKilometersBudget < 0) {
-    kilometersExceedingIncluded = -1 * includedKilometersBudget;
-  }
-
-  return this.rentalFee +
-    (this.drivingPerMinute * driving) +
-    (this.parkingPerMinute * parking) +
-    (this.extraKilometer * kilometersExceedingIncluded);
-};
-
-const defaultHourlyPackageCalculation =
-function defaultHourlyPackageCalculation(driving, parking, kilometers) {
-  let packageBudget = this.packageBudget;
+const defaultCostCalculation =
+function defaultCostCalculation(driving, parking, kilometers) {
+  let packageBudget = this.packageBudget || 0;
 
   packageBudget -= driving;
   let drivingExceedingPackage = 0;
@@ -31,7 +17,7 @@ function defaultHourlyPackageCalculation(driving, parking, kilometers) {
     parkingExceedingPackage = -1 * packageBudget;
   }
 
-  let includedKilometersBudget = this.includedKilometers;
+  let includedKilometersBudget = this.includedKilometers || 0;
   includedKilometersBudget -= kilometers;
   let kilometersExceedingIncluded = 0;
   if (includedKilometersBudget < 0) {
@@ -39,7 +25,7 @@ function defaultHourlyPackageCalculation(driving, parking, kilometers) {
   }
 
   return this.rentalFee +
-    this.packagePrice +
+    (this.packagePrice || 0) +
     (this.drivingPerMinute * drivingExceedingPackage) +
     (this.parkingPerMinute * parkingExceedingPackage) +
     (this.extraKilometer * kilometersExceedingIncluded);
@@ -104,7 +90,7 @@ const Calculator = {
         rentalFee: 1,
         packagePrice: 29,
         packageBudget: 3 * 60,
-        calculateCost: defaultHourlyPackageCalculation,
+        calculateCost: defaultCostCalculation,
       },
       mini6hour: {
         name: 'DriveNow Mini 6-Stunden-Paket',
@@ -115,7 +101,7 @@ const Calculator = {
         rentalFee: 1,
         packagePrice: 54,
         packageBudget: 6 * 60,
-        calculateCost: defaultHourlyPackageCalculation,
+        calculateCost: defaultCostCalculation,
       },
       mini9hour: {
         name: 'DriveNow Mini 9-Stunden-Paket',
@@ -126,7 +112,7 @@ const Calculator = {
         rentalFee: 1,
         packagePrice: 79,
         packageBudget: 9 * 60,
-        calculateCost: defaultHourlyPackageCalculation,
+        calculateCost: defaultCostCalculation,
       },
       bmw2: {
         name: 'DriveNow Mini Cabrio/BMW 2er',
