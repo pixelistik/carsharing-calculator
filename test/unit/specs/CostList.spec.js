@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import CostList from '@/components/CostList';
+import tariffs from '@/tariffs';
 
 describe('CostList.vue', () => {
   it('should render correct contents', () => {
@@ -9,6 +10,7 @@ describe('CostList.vue', () => {
         driving: 1,
         parking: 1,
         kilometers: 201,
+        tariffs,
       },
     }).$mount();
 

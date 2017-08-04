@@ -20,13 +20,14 @@
           </md-input-container>
         </form>
       </md-layout>
-      <cost-list v-bind:driving="driving" v-bind:parking="parking" v-bind:kilometers="kilometers"></cost-list>
+      <cost-list v-bind:driving="driving" v-bind:parking="parking" v-bind:kilometers="kilometers" v-bind:tariffs="tariffs"></cost-list>
     </main>
   </div>
 </template>
 
 <script>
-import CostList from './components/CostList';
+import CostList from '@/components/CostList';
+import tariffs from '@/tariffs';
 
 export default {
   name: 'app',
@@ -35,6 +36,7 @@ export default {
       driving: 10,
       parking: 5,
       kilometers: 200,
+      tariffs,
     };
   },
   components: {

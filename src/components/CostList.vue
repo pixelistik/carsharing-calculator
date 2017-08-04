@@ -6,7 +6,7 @@
     <md-layout>
       <md-table class="tariffs">
         <md-table-body>
-          <md-table-row v-for="tariff in tariffs" :key="tariff.name">
+          <md-table-row v-for="tariff in costs" :key="tariff.name">
             <md-table-cell>
               {{ tariff.name }}
             </md-table-cell>
@@ -22,21 +22,22 @@
 
 <script>
 import Calculator from '@/Calculator';
-import tariffs from '@/tariffs';
 
 const calculator = Object.create(Calculator);
-calculator.tariffs = tariffs;
 
 export default {
   name: 'cost-list',
-  props: ['driving', 'parking', 'kilometers'],
+  props: ['driving', 'parking', 'kilometers', 'tariffs'],
+  created() {
+    calculator.tariffs = this.tariffs;
+  },
   data() {
     return {
       msg: 'Welcome to Your Vue.js PWA',
     };
   },
   computed: {
-    tariffs() {
+    costs() {
       return calculator.calculateAllCosts(this.driving, this.parking, this.kilometers);
     },
   },
