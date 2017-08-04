@@ -1,10 +1,12 @@
 import Calculator from '@/Calculator';
+import tariffs from '@/tariffs';
 
 describe('Calculator', () => {
   let calculator;
 
   beforeEach(() => {
     calculator = Object.create(Calculator);
+    calculator.tariffs = tariffs;
   });
 
   it('should instantiate', () => {

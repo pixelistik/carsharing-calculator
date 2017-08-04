@@ -22,8 +22,10 @@
 
 <script>
 import Calculator from '@/Calculator';
+import tariffs from '@/tariffs';
 
 const calculator = Object.create(Calculator);
+calculator.tariffs = tariffs;
 
 export default {
   name: 'cost-list',

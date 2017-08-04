@@ -1,9 +1,6 @@
-import tariffs from '@/tariffs';
-
 const _ = require('lodash');
 
 const Calculator = {
-  tariffs,
   calculateCosts: function calculateCosts(tariff, driving, parking, kilometers) {
     let packageBudget = tariff.packageBudget || 0;
 
