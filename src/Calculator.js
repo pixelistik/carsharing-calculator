@@ -1,36 +1,5 @@
 const _ = require('lodash');
 
-const defaultCostCalculation =
-function defaultCostCalculation(driving, parking, kilometers) {
-  let packageBudget = this.packageBudget || 0;
-
-  packageBudget -= driving;
-  let drivingExceedingPackage = 0;
-  if (packageBudget < 0) {
-    drivingExceedingPackage = -1 * packageBudget;
-    packageBudget = 0;
-  }
-
-  packageBudget -= parking;
-  let parkingExceedingPackage = 0;
-  if (packageBudget < 0) {
-    parkingExceedingPackage = -1 * packageBudget;
-  }
-
-  let includedKilometersBudget = this.includedKilometers || 0;
-  includedKilometersBudget -= kilometers;
-  let kilometersExceedingIncluded = 0;
-  if (includedKilometersBudget < 0) {
-    kilometersExceedingIncluded = -1 * includedKilometersBudget;
-  }
-
-  return this.rentalFee +
-    (this.packagePrice || 0) +
-    (this.drivingPerMinute * drivingExceedingPackage) +
-    (this.parkingPerMinute * parkingExceedingPackage) +
-    (this.extraKilometer * kilometersExceedingIncluded);
-};
-
 const Calculator = {
   tariffs: {
     car2go: {
@@ -41,7 +10,6 @@ const Calculator = {
         includedKilometers: 200,
         extraKilometer: 0.29,
         rentalFee: 0,
-        calculateCost: defaultCostCalculation,
       },
       aklasse: {
         name: 'car2go A-Klasse',
@@ -50,7 +18,6 @@ const Calculator = {
         includedKilometers: 200,
         extraKilometer: 0.29,
         rentalFee: 0,
-        calculateCost: defaultCostCalculation,
       },
       clagla: {
         name: 'car2go CLA/GLA',
@@ -59,7 +26,6 @@ const Calculator = {
         includedKilometers: 200,
         extraKilometer: 0.29,
         rentalFee: 0,
-        calculateCost: defaultCostCalculation,
       },
     },
     driveNow: {
@@ -70,7 +36,6 @@ const Calculator = {
         includedKilometers: 200,
         extraKilometer: 0.29,
         rentalFee: 1,
-        calculateCost: defaultCostCalculation,
       },
       minidrivensave: {
         name: "DriveNow Mini/BMW 1er Drive'n Save",
@@ -79,7 +44,6 @@ const Calculator = {
         includedKilometers: 200,
         extraKilometer: 0.29,
         rentalFee: 1,
-        calculateCost: defaultCostCalculation,
       },
       mini3hour: {
         name: 'DriveNow Mini 3-Stunden-Paket',
@@ -90,7 +54,6 @@ const Calculator = {
         rentalFee: 1,
         packagePrice: 29,
         packageBudget: 3 * 60,
-        calculateCost: defaultCostCalculation,
       },
       mini6hour: {
         name: 'DriveNow Mini 6-Stunden-Paket',
@@ -101,7 +64,6 @@ const Calculator = {
         rentalFee: 1,
         packagePrice: 54,
         packageBudget: 6 * 60,
-        calculateCost: defaultCostCalculation,
       },
       mini9hour: {
         name: 'DriveNow Mini 9-Stunden-Paket',
@@ -112,7 +74,6 @@ const Calculator = {
         rentalFee: 1,
         packagePrice: 79,
         packageBudget: 9 * 60,
-        calculateCost: defaultCostCalculation,
       },
       bmw2: {
         name: 'DriveNow Mini Cabrio/BMW 2er',
@@ -121,7 +82,6 @@ const Calculator = {
         includedKilometers: 200,
         extraKilometer: 0.29,
         rentalFee: 1,
-        calculateCost: defaultCostCalculation,
       },
       bmw2drivensave: {
         name: "DriveNow Mini Cabrio/BMW 2er Drive'n Save",
@@ -130,7 +90,6 @@ const Calculator = {
         includedKilometers: 200,
         extraKilometer: 0.29,
         rentalFee: 1,
-        calculateCost: defaultCostCalculation,
       },
     },
     flinkster: {
@@ -141,7 +100,6 @@ const Calculator = {
         includedKilometers: 0,
         extraKilometer: 0.18,
         rentalFee: 0,
-        calculateCost: defaultCostCalculation,
       },
       klein: {
         name: 'Flinkster "Klein" (Fiesta, Polo)',
@@ -150,7 +108,6 @@ const Calculator = {
         includedKilometers: 0,
         extraKilometer: 0.18,
         rentalFee: 0,
-        calculateCost: defaultCostCalculation,
       },
       kompakt: {
         name: 'Flinkster "Kompakt" (Astra, Golf)',
@@ -159,7 +116,6 @@ const Calculator = {
         includedKilometers: 0,
         extraKilometer: 0.18,
         rentalFee: 0,
-        calculateCost: defaultCostCalculation,
       },
       mittel: {
         name: 'Flinkster "Mittel" (Passat, Mondeo)',
@@ -168,9 +124,37 @@ const Calculator = {
         includedKilometers: 0,
         extraKilometer: 0.18,
         rentalFee: 0,
-        calculateCost: defaultCostCalculation,
       },
     },
+  },
+  calculateCosts: function calculateCosts(tariff, driving, parking, kilometers) {
+    let packageBudget = tariff.packageBudget || 0;
+
+    packageBudget -= driving;
+    let drivingExceedingPackage = 0;
+    if (packageBudget < 0) {
+      drivingExceedingPackage = -1 * packageBudget;
+      packageBudget = 0;
+    }
+
+    packageBudget -= parking;
+    let parkingExceedingPackage = 0;
+    if (packageBudget < 0) {
+      parkingExceedingPackage = -1 * packageBudget;
+    }
+
+    let includedKilometersBudget = tariff.includedKilometers || 0;
+    includedKilometersBudget -= kilometers;
+    let kilometersExceedingIncluded = 0;
+    if (includedKilometersBudget < 0) {
+      kilometersExceedingIncluded = -1 * includedKilometersBudget;
+    }
+
+    return tariff.rentalFee +
+      (tariff.packagePrice || 0) +
+      (tariff.drivingPerMinute * drivingExceedingPackage) +
+      (tariff.parkingPerMinute * parkingExceedingPackage) +
+      (tariff.extraKilometer * kilometersExceedingIncluded);
   },
   calculateAllCosts: function calculateAllCosts(driving, parking, kilometers) {
     const tariffs = [];
@@ -192,7 +176,7 @@ const Calculator = {
 
     const costs = tariffs.map((tariff) => {
       const tariffWithCost = tariff;
-      tariffWithCost.totalCost = tariff.calculateCost(driving, parking, kilometers);
+      tariffWithCost.totalCost = this.calculateCosts(tariff, driving, parking, kilometers);
       return tariffWithCost;
     });
 
