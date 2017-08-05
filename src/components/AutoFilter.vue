@@ -3,7 +3,10 @@
     <div class="filter--category" v-for="filterCategory in filterCategories">
       <span class="filter--category--name">{{ filterCategory.name }}</span>
       <div class="filter--value" v-for="filterValue in filterCategory.values">
-        {{ filterValue }}
+        <label>
+          <input type="checkbox" v-model="filterValue.selected" />
+          {{ filterValue.name }}
+        </label>
       </div>
     </div>
   </div>
@@ -40,7 +43,10 @@ export default {
               values: [],
             };
           }
-          collectedCategories[name].values.push(item.filterProperties[name]);
+          collectedCategories[name].values.push({
+            name: item.filterProperties[name],
+            selected: true,
+          });
         });
       });
 
@@ -50,7 +56,7 @@ export default {
         collectedCategoryName =>
           ({
             name: collectedCategoryName,
-            values: _.uniq(collectedCategories[collectedCategoryName].values),
+            values: _.uniqBy(collectedCategories[collectedCategoryName].values, 'name'),
           }),
         );
     },

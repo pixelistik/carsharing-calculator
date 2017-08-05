@@ -59,4 +59,23 @@ describe('AutoFilter.vue', () => {
         .querySelectorAll('.filter--category:nth-child(2) .filter--value').length,
     ).to.equal(1);
   });
+
+  describe('Selection', () => {
+    it('should select all values by default', () => {
+      expect(
+        vm.$el
+          .querySelectorAll('.filter--category:nth-child(1) .filter--value input:checked').length,
+      ).to.equal(2);
+    });
+
+    it('should bind selection to data', () => {
+      vm.filterCategories[0].values[0].selected = false;
+      Vue.nextTick(() => {
+        expect(
+          vm.$el
+            .querySelectorAll('.filter--category:nth-child(1) .filter--value input:checked').length,
+        ).to.equal(1);
+      });
+    });
+  });
 });
