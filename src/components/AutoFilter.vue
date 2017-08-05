@@ -15,13 +15,16 @@ const _ = require('lodash');
 export default {
   name: 'auto-filter',
   props: ['items'],
+  created() {
+    this.filterCategories = this.extractFilterCategoriesFromItems();
+  },
   data() {
     return {
-      bla: 'Welcome to Your Vue.js PWA',
+      filterCategories: [],
     };
   },
-  computed: {
-    filterCategories() {
+  methods: {
+    extractFilterCategoriesFromItems() {
       const collectedCategories = {};
 
       this.items.forEach((item) => {
