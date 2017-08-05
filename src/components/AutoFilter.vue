@@ -25,6 +25,9 @@ export default {
       const collectedCategories = {};
 
       this.items.forEach((item) => {
+        if (typeof item.filterProperties === 'undefined') {
+          return;
+        }
         const categories = Object.keys(item.filterProperties);
         // const name = categories[0];
 
