@@ -31,30 +31,16 @@ const Calculator = {
       (tariff.extraKilometer * kilometersExceedingIncluded);
   },
   calculateAllCosts: function calculateAllCosts(driving, parking, kilometers) {
-    const collectedTariffs = [];
-
-    let keys = Object.keys(this.tariffs.car2go);
-    keys.forEach((key) => {
-      collectedTariffs.push(this.tariffs.car2go[key]);
-    });
-
-    keys = Object.keys(this.tariffs.driveNow);
-    keys.forEach((key) => {
-      collectedTariffs.push(this.tariffs.driveNow[key]);
-    });
-
-    keys = Object.keys(this.tariffs.flinkster);
-    keys.forEach((key) => {
-      collectedTariffs.push(this.tariffs.flinkster[key]);
-    });
-
-    const costs = collectedTariffs.map((tariff) => {
+    const costs = this.tariffs.map((tariff) => {
       const tariffWithCost = tariff;
       tariffWithCost.totalCost = this.calculateCosts(tariff, driving, parking, kilometers);
       return tariffWithCost;
     });
 
     return _.sortBy(costs, ['totalCost']);
+  },
+  tariffById: function tariffById(tariffId) {
+    return this.tariffs.filter(tariff => tariffId === tariff.id)[0];
   },
 };
 
