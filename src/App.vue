@@ -21,6 +21,7 @@
         </form>
       </md-layout>
       <cost-list v-bind:driving="driving" v-bind:parking="parking" v-bind:kilometers="kilometers" v-bind:tariffs="tariffs"></cost-list>
+      <auto-filter v-bind:items="tariffs"></auto-filter>
     </main>
   </div>
 </template>
@@ -28,6 +29,7 @@
 <script>
 import CostList from '@/components/CostList';
 import tariffs from '@/tariffs';
+import AutoFilter from '@/components/AutoFilter';
 
 export default {
   name: 'app',
@@ -41,6 +43,7 @@ export default {
   },
   components: {
     CostList,
+    AutoFilter,
   },
 };
 </script>
