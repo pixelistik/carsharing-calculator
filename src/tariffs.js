@@ -7,6 +7,10 @@ export default [
     includedKilometers: 200,
     extraKilometer: 0.29,
     rentalFee: 0,
+    filterProperties: {
+      Betreiber: 'car2go',
+      Verleih: 'Free Floating',
+    },
   },
   {
     id: 'car2go.aklasse',
@@ -16,6 +20,10 @@ export default [
     includedKilometers: 200,
     extraKilometer: 0.29,
     rentalFee: 0,
+    filterProperties: {
+      Betreiber: 'car2go',
+      Verleih: 'Free Floating',
+    },
   },
   {
     id: 'car2go.clagla',
@@ -25,6 +33,10 @@ export default [
     includedKilometers: 200,
     extraKilometer: 0.29,
     rentalFee: 0,
+    filterProperties: {
+      Betreiber: 'car2go',
+      Verleih: 'Free Floating',
+    },
   },
   {
     id: 'driveNow.mini',
@@ -34,6 +46,10 @@ export default [
     includedKilometers: 200,
     extraKilometer: 0.29,
     rentalFee: 1,
+    filterProperties: {
+      Betreiber: 'DriveNow',
+      Verleih: 'Free Floating',
+    },
   },
   {
     id: 'driveNow.minidrivensave',
@@ -43,6 +59,10 @@ export default [
     includedKilometers: 200,
     extraKilometer: 0.29,
     rentalFee: 1,
+    filterProperties: {
+      Betreiber: 'DriveNow',
+      Verleih: 'Free Floating',
+    },
   },
   {
     id: 'driveNow.mini3hour',
@@ -54,6 +74,10 @@ export default [
     rentalFee: 1,
     packagePrice: 29,
     packageBudget: 3 * 60,
+    filterProperties: {
+      Betreiber: 'DriveNow',
+      Verleih: 'Free Floating',
+    },
   },
   {
     id: 'driveNow.mini6hour',
@@ -65,6 +89,10 @@ export default [
     rentalFee: 1,
     packagePrice: 54,
     packageBudget: 6 * 60,
+    filterProperties: {
+      Betreiber: 'DriveNow',
+      Verleih: 'Free Floating',
+    },
   },
   {
     id: 'driveNow.mini9hour',
@@ -76,6 +104,10 @@ export default [
     rentalFee: 1,
     packagePrice: 79,
     packageBudget: 9 * 60,
+    filterProperties: {
+      Betreiber: 'DriveNow',
+      Verleih: 'Free Floating',
+    },
   },
   {
     id: 'driveNow.bmw2',
@@ -85,6 +117,10 @@ export default [
     includedKilometers: 200,
     extraKilometer: 0.29,
     rentalFee: 1,
+    filterProperties: {
+      Betreiber: 'DriveNow',
+      Verleih: 'Free Floating',
+    },
   },
   {
     id: 'driveNow.bmw2drivensave',
@@ -94,6 +130,10 @@ export default [
     includedKilometers: 200,
     extraKilometer: 0.29,
     rentalFee: 1,
+    filterProperties: {
+      Betreiber: 'DriveNow',
+      Verleih: 'Free Floating',
+    },
   },
   {
     id: 'flinkster.mini',
@@ -103,6 +143,10 @@ export default [
     includedKilometers: 0,
     extraKilometer: 0.18,
     rentalFee: 0,
+    filterProperties: {
+      Betreiber: 'Flinkster',
+      Verleih: 'Stationär',
+    },
   },
   {
     id: 'flinkster.klein',
@@ -112,6 +156,10 @@ export default [
     includedKilometers: 0,
     extraKilometer: 0.18,
     rentalFee: 0,
+    filterProperties: {
+      Betreiber: 'Flinkster',
+      Verleih: 'Stationär',
+    },
   },
   {
     id: 'flinkster.kompakt',
@@ -121,6 +169,10 @@ export default [
     includedKilometers: 0,
     extraKilometer: 0.18,
     rentalFee: 0,
+    filterProperties: {
+      Betreiber: 'Flinkster',
+      Verleih: 'Stationär',
+    },
   },
   {
     id: 'flinkster.mittel',
@@ -130,5 +182,9 @@ export default [
     includedKilometers: 0,
     extraKilometer: 0.18,
     rentalFee: 0,
+    filterProperties: {
+      Betreiber: 'Flinkster',
+      Verleih: 'Stationär',
+    },
   },
 ];
