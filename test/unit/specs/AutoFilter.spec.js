@@ -79,4 +79,20 @@ describe('AutoFilter.vue', () => {
       });
     });
   });
+
+  describe('Filtering', () => {
+    it('should filter nothing by default', () => {
+      const result = itemsFixture.filter(vm.filterFunction);
+
+      expect(result.length).to.equal(2);
+    });
+
+    it('should filter a 2-door item if this category value is deselected', () => {
+      vm.filterCategories[0].values[0].selected = false;
+      const result = itemsFixture.filter(vm.filterFunction);
+
+      expect(result.length).to.equal(1);
+      expect(result[0].id).to.equal(2);
+    });
+  });
 });

@@ -26,6 +26,24 @@ export default {
       filterCategories: [],
     };
   },
+  computed: {
+    filterFunction() {
+      const vm = this;
+
+      return (item) => {
+        const categories = Object.keys(item.filterProperties);
+
+        return categories.reduce((result, category) => {
+          const valueInItem = item.filterProperties[category];
+
+          const categoryInFilter = _.find(vm.filterCategories, ['name', category]);
+          const valueInFilter = _.find(categoryInFilter.values, ['name', valueInItem]);
+
+          return result && valueInFilter.selected;
+        }, true);
+      };
+    },
+  },
   methods: {
     extractFilterCategoriesFromItems() {
       const collectedCategories = {};
@@ -35,7 +53,6 @@ export default {
           return;
         }
         const categories = Object.keys(item.filterProperties);
-        // const name = categories[0];
 
         categories.forEach((name) => {
           if (typeof collectedCategories[name] === 'undefined') {
