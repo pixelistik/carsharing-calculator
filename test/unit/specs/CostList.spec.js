@@ -11,6 +11,7 @@ describe('CostList.vue', () => {
         parking: 1,
         kilometers: 201,
         tariffs,
+        filter: () => true,
       },
     }).$mount();
 
