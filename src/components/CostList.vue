@@ -27,7 +27,7 @@ const calculator = Object.create(Calculator);
 
 export default {
   name: 'cost-list',
-  props: ['driving', 'parking', 'kilometers', 'tariffs'],
+  props: ['driving', 'parking', 'kilometers', 'tariffs', 'filter'],
   created() {
     calculator.tariffs = this.tariffs;
   },
@@ -38,7 +38,8 @@ export default {
   },
   computed: {
     costs() {
-      return calculator.calculateAllCosts(this.driving, this.parking, this.kilometers);
+      return calculator.calculateAllCosts(this.driving, this.parking, this.kilometers)
+        .filter(this.filter);
     },
   },
   filters: {

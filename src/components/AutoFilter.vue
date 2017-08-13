@@ -44,6 +44,14 @@ export default {
       };
     },
   },
+  watch: {
+    filterCategories: {
+      handler: function filterCategories() {
+        this.$emit('filterchanged', this.filterFunction);
+      },
+      deep: true,
+    },
+  },
   methods: {
     extractFilterCategoriesFromItems() {
       const collectedCategories = {};

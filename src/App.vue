@@ -20,8 +20,14 @@
           </md-input-container>
         </form>
       </md-layout>
-      <cost-list v-bind:driving="driving" v-bind:parking="parking" v-bind:kilometers="kilometers" v-bind:tariffs="tariffs"></cost-list>
-      <auto-filter v-bind:items="tariffs"></auto-filter>
+      <cost-list
+        v-bind:driving="driving"
+        v-bind:parking="parking"
+        v-bind:kilometers="kilometers"
+        v-bind:tariffs="tariffs"
+        v-bind:filter="filter"
+      ></cost-list>
+      <auto-filter v-bind:items="tariffs" v-on:filterchanged="updateFilter"></auto-filter>
     </main>
   </div>
 </template>
@@ -39,11 +45,17 @@ export default {
       parking: 5,
       kilometers: 200,
       tariffs,
+      filter: () => true,
     };
   },
   components: {
     CostList,
     AutoFilter,
+  },
+  methods: {
+    updateFilter: function updateFilter(data) {
+      this.filter = data;
+    },
   },
 };
 </script>
