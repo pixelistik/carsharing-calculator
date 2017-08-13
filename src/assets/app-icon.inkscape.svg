@@ -210,7 +210,8 @@
        y1="5"
        x2="28.312639"
        y2="27.088692"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0692117,0,0,1.0692117,-4.7299067,-2.6508686)" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -219,9 +220,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.757854"
-     inkscape:cx="68.979545"
-     inkscape:cy="78.70553"
+     inkscape:zoom="2.4859809"
+     inkscape:cx="91.734564"
+     inkscape:cy="55.950511"
      inkscape:document-units="mm"
      inkscape:current-layer="layer3"
      showgrid="false"
@@ -264,16 +265,15 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Background"
-     sodipodi:insensitive="true"
      style="display:inline">
     <rect
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#4c4196;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.35277778;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#4c4196;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.37719414;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
        id="rect4516"
-       width="38"
-       height="38"
-       x="5"
-       y="5"
-       rx="3.2" />
+       width="40.630047"
+       height="40.630047"
+       x="0.61615187"
+       y="2.6951897"
+       rx="3.4214776" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -283,7 +283,7 @@
     <g
        id="g4683-2"
        style="opacity:0.32100004;fill:#3b3b3b;fill-opacity:1;filter:url(#filter5266)"
-       transform="matrix(1.1075347,0,0,1.1075347,-0.94830612,-0.95005232)">
+       transform="matrix(1.2514188,0,0,1.2514188,-6.1185898,-4.5116392)">
       <rect
          y="18.273294"
          x="22.276217"
@@ -333,7 +333,7 @@
     </g>
     <g
        id="g4683"
-       transform="matrix(1.1223807,0,0,1.1223807,-1.3895464,-1.7163388)">
+       transform="matrix(1.2681934,0,0,1.2681934,-6.6171533,-5.3774768)">
       <rect
          y="18.273294"
          x="22.276217"
@@ -383,7 +383,7 @@
     </g>
     <g
        id="g4552"
-       transform="matrix(1.1558442,0,0,1.1558442,-0.50053063,-4.6557206)">
+       transform="matrix(1.3060043,0,0,1.3060043,-5.6126421,-8.6987262)">
       <circle
          r="2.8974133"
          cy="29.376135"
@@ -408,7 +408,7 @@
     </g>
     <g
        id="g4562"
-       transform="matrix(0.7438396,0.7438396,-0.7438396,0.7438396,46.813444,-4.9749691)">
+       transform="matrix(0.84047464,0.84047464,-0.84047464,0.84047464,47.848068,-9.0594501)">
       <circle
          style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#2f2f2f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.79387498;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
          id="circle4554"
@@ -436,15 +436,14 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="Finish"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <rect
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.74800002;fill:url(#linearGradient5292);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.35277778;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.74800002;fill:url(#linearGradient5292);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.37719414;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
        id="rect4516-3"
-       width="38.000004"
-       height="38.000004"
-       x="4.9999981"
-       y="4.9999981"
-       rx="3.2" />
+       width="40.630047"
+       height="40.630047"
+       x="0.6161496"
+       y="2.6951876"
+       rx="3.4214776" />
   </g>
 </svg>

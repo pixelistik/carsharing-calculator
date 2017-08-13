@@ -180,6 +180,7 @@
          stdDeviation="0.60678663" />
     </filter>
     <linearGradient
+       gradientTransform="matrix(1.0692117,0,0,1.0692117,-4.7299067,-2.6508686)"
        gradientUnits="userSpaceOnUse"
        y2="27.088692"
        x2="28.312639"
@@ -218,19 +219,19 @@
      style="display:inline"
      id="layer2">
     <rect
-       rx="3.2"
-       y="5"
-       x="5"
-       height="38"
-       width="38"
+       rx="3.4214776"
+       y="2.6951897"
+       x="0.61615187"
+       height="40.630047"
+       width="40.630047"
        id="rect4516"
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#4c4196;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.35277778;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#4c4196;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.37719414;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
   </g>
   <g
      style="display:inline"
      id="layer3">
     <g
-       transform="matrix(1.1075347,0,0,1.1075347,-0.94830612,-0.95005232)"
+       transform="matrix(1.2514188,0,0,1.2514188,-6.1185898,-4.5116392)"
        style="opacity:0.32100004;fill:#3b3b3b;fill-opacity:1;filter:url(#filter5266)"
        id="g4683-2">
       <rect
@@ -270,7 +271,7 @@
          id="path4617-2" />
     </g>
     <g
-       transform="matrix(1.1223807,0,0,1.1223807,-1.3895464,-1.7163388)"
+       transform="matrix(1.2681934,0,0,1.2681934,-6.6171533,-5.3774768)"
        id="g4683">
       <rect
          style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#076f6f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.35277778;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
@@ -309,7 +310,7 @@
          id="path4617" />
     </g>
     <g
-       transform="matrix(1.1558442,0,0,1.1558442,-0.50053063,-4.6557206)"
+       transform="matrix(1.3060043,0,0,1.3060043,-5.6126421,-8.6987262)"
        id="g4552">
       <circle
          style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#2f2f2f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.79387498;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
@@ -332,7 +333,7 @@
       </g>
     </g>
     <g
-       transform="matrix(0.7438396,0.7438396,-0.7438396,0.7438396,46.813444,-4.9749691)"
+       transform="matrix(0.84047464,0.84047464,-0.84047464,0.84047464,47.848068,-9.0594501)"
        id="g4562">
       <circle
          r="2.8974133"
@@ -359,12 +360,12 @@
      style="display:inline"
      id="layer4">
     <rect
-       rx="3.2"
-       y="4.9999981"
-       x="4.9999981"
-       height="38.000004"
-       width="38.000004"
+       rx="3.4214776"
+       y="2.6951876"
+       x="0.6161496"
+       height="40.630047"
+       width="40.630047"
        id="rect4516-3"
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.74800002;fill:url(#linearGradient5292);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.35277778;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.74800002;fill:url(#linearGradient5292);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.37719414;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
   </g>
 </svg>
