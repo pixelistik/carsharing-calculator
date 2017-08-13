@@ -27,13 +27,21 @@
         v-bind:tariffs="tariffs"
         v-bind:filter="filter"
       ></cost-list>
-      <auto-filter v-if="showFilterConfig" v-bind:items="tariffs" v-on:filterchanged="updateFilter"></auto-filter>
       <md-button
         class="md-fab md-fab-bottom-right md-primary"
-        v-on:click="showFilterConfig = !showFilterConfig"
+        v-on:click="openDialog('filterdialog')"
       >
         <md-icon>filter_list</md-icon>
       </md-button>
+      <md-dialog ref="filterdialog">
+        <md-dialog-content>
+          <md-dialog-title>Tarife filtern</md-dialog-title>
+          <auto-filter v-bind:items="tariffs" v-on:filterchanged="updateFilter"></auto-filter>
+        </md-dialog-content>
+        <md-dialog-actions>
+          <md-button class="md-primary" @click="closeDialog('filterdialog')">Ok</md-button>
+        </md-dialog-actions>
+      </md-dialog>
     </main>
   </div>
 </template>
@@ -52,7 +60,6 @@ export default {
       kilometers: 200,
       tariffs,
       filter: () => true,
-      showFilterConfig: false,
     };
   },
   components: {
@@ -62,6 +69,12 @@ export default {
   methods: {
     updateFilter: function updateFilter(data) {
       this.filter = data;
+    },
+    openDialog(ref) {
+      this.$refs[ref].open();
+    },
+    closeDialog(ref) {
+      this.$refs[ref].close();
     },
   },
 };
