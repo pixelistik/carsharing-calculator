@@ -28,7 +28,7 @@
         v-bind:filter="filter"
       ></cost-list>
       <md-button
-        class="md-fab md-fab-bottom-right md-primary"
+        class="md-fab md-fab-bottom-right md-primary filter-button"
         v-on:click="openDialog('filterdialog')"
       >
         <md-icon>filter_list</md-icon>
@@ -85,5 +85,9 @@ export default {
 <style>
 .md-headline {
   padding: 0 24px;
+}
+
+.filter-button.md-fab {
+  position: fixed;
 }
 </style>

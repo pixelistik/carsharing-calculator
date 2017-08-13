@@ -1,11 +1,10 @@
 <template>
   <div class="filter">
     <div class="filter--category" v-for="filterCategory in filterCategories">
-      <span class="filter--category--name">{{ filterCategory.name }}</span>
+      <h3 class="filter--category--name">{{ filterCategory.name }}</h3>
       <div class="filter--value" v-for="filterValue in filterCategory.values">
         <label>
-          <input type="checkbox" v-model="filterValue.selected" />
-          {{ filterValue.name }}
+          <md-checkbox v-model="filterValue.selected" class="md-primary">{{ filterValue.name }}</md-checkbox>
         </label>
       </div>
     </div>
