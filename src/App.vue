@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <h1 class="md-headline">Carsharing-Preisvergleich</h1>
+      <h1 class="md-headline">Carsharing-Kostenrechner</h1>
     </header>
     <main>
       <md-layout md-gutter>
