@@ -27,7 +27,13 @@
         v-bind:tariffs="tariffs"
         v-bind:filter="filter"
       ></cost-list>
-      <auto-filter v-bind:items="tariffs" v-on:filterchanged="updateFilter"></auto-filter>
+      <auto-filter v-if="showFilterConfig" v-bind:items="tariffs" v-on:filterchanged="updateFilter"></auto-filter>
+      <md-button
+        class="md-fab md-fab-bottom-right md-primary"
+        v-on:click="showFilterConfig = !showFilterConfig"
+      >
+        <md-icon>filter_list</md-icon>
+      </md-button>
     </main>
   </div>
 </template>
@@ -46,6 +52,7 @@ export default {
       kilometers: 200,
       tariffs,
       filter: () => true,
+      showFilterConfig: false,
     };
   },
   components: {
