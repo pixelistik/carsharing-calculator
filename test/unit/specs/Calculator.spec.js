@@ -17,7 +17,7 @@ describe('Calculator', () => {
   it('should list all the tariffs', () => {
     const result = calculator.calculateAllCosts(1, 0, 1);
 
-    expect(result).to.have.length(14);
+    expect(result).to.have.length(29);
   });
 
   describe('Car2Go', () => {
