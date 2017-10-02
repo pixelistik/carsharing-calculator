@@ -30,6 +30,10 @@ export default {
       const vm = this;
 
       return (item) => {
+        if (typeof item.filterProperties === 'undefined') {
+          return true;
+        }
+
         const categories = Object.keys(item.filterProperties);
 
         return categories.reduce((result, category) => {

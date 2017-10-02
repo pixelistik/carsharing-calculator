@@ -94,5 +94,22 @@ describe('AutoFilter.vue', () => {
       expect(result.length).to.equal(1);
       expect(result[0].id).to.equal(2);
     });
+
+    it('should not touch any items that have no filterProperties', () => {
+      const items = [
+        {
+          id: 1,
+        },
+      ];
+
+      vm = new Constructor({
+        propsData: {
+          items,
+        },
+      }).$mount();
+
+      const result = items.filter(vm.filterFunction);
+      expect(result.length).to.equal(1);
+    });
   });
 });
