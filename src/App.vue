@@ -43,6 +43,22 @@
         </md-dialog-actions>
       </md-dialog>
     </main>
+    <footer>
+      <md-card>
+        <md-card-header>
+          <div class="md-title">Info:</div>
+        </md-card-header>
+        <md-card-content>
+          <p>
+          Alle Angaben ohne Gewähr. Dieser Rechner ist kein Angebot der genannten Carsharing-Betreiber.
+        </p>
+        <p>
+          <a href="http://pixelistik.de/impressum.html">Impressum</a>
+          <a href="https://github.com/pixelistik/carsharing-calculator">Sourcecode</a>
+        </p>
+        </md-card-content>
+      </md-card>
+    </footer>
   </div>
 </template>
 
