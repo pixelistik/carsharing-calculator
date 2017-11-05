@@ -23,19 +23,19 @@ describe('Calculator', () => {
   describe('Car2Go', () => {
     it('should make a simple driving calculation', () => {
       const result = calculator.calculateCosts(calculator.tariffById('car2go.smart'), 10, 0, 1);
-      expect(result).to.equal(0.24 * 10);
+      expect(result).to.equal(0.26 * 10);
     });
 
     it('should make a driving/parking calculation', () => {
       const result =
-        calculator.calculateCosts(calculator.tariffById('car2go.smart'), 10, 5, 1);
-      expect(result).to.equal((0.24 * 10) + (0.19 * 5));
+        calculator.calculateCosts(calculator.tariffById('driveNow.mini'), 10, 5, 1);
+      expect(result).to.equal(1 + (0.31 * 10) + (0.15 * 5));
     });
 
     describe('Distance fees', () => {
       it('should add the cost for kilometers that exceed the included 200 km', () => {
         const result = calculator.calculateCosts(calculator.tariffById('car2go.smart'), 10, 0, 203);
-        expect(result).to.equal((0.24 * 10) + (0.29 * 3));
+        expect(result).to.equal((0.26 * 10) + (0.29 * 3));
       });
     });
   });
