@@ -4,7 +4,10 @@ const Calculator = {
   calculateCosts: function calculateCosts(tariff, driving, parking, kilometers) {
     let packageBudget = tariff.packageBudget || 0;
 
-    packageBudget -= driving;
+    const drivingGo = driving / 2;
+    const drivingReturn = driving / 2;
+
+    packageBudget -= drivingGo;
     let drivingExceedingPackage = 0;
     if (packageBudget < 0) {
       drivingExceedingPackage = -1 * packageBudget;
@@ -15,6 +18,13 @@ const Calculator = {
     let parkingExceedingPackage = 0;
     if (packageBudget < 0) {
       parkingExceedingPackage = -1 * packageBudget;
+      packageBudget = 0;
+    }
+
+    packageBudget -= drivingReturn;
+    if (packageBudget < 0) {
+      drivingExceedingPackage -= packageBudget;
+      packageBudget = 0;
     }
 
     let includedKilometersBudget = tariff.includedKilometers || 0;

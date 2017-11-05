@@ -57,14 +57,13 @@ describe('Calculator', () => {
         expect(result).to.equal(1 + 29 + 0.31);
       });
 
-      it('should add parking minutes that are above the package driving time', () => {
-        const result = calculator.calculateCosts(calculator.tariffById('driveNow.mini3hour'), 180, 1, 1);
-        expect(result).to.equal(1 + 29 + 0.15);
-      });
-
-      it('should add driving and parking minutes that are above the package time', () => {
-        const result = calculator.calculateCosts(calculator.tariffById('driveNow.mini3hour'), 190, 10, 1);
-        expect(result).to.equal(1 + 29 + (10 * 0.31) + (10 * 0.15));
+      it('should add driving and parking minutes that are above the package time, assuming a drive/park/drive cycle', () => {
+        // This is the assumed trip:
+        // Drive there: 170 min
+        // Park 20 min (half of which overlaps into extra time)
+        // Drive back: 170 min (all are extra time)
+        const result = calculator.calculateCosts(calculator.tariffById('driveNow.mini3hour'), 340, 20, 1);
+        expect(result).to.equal(1 + 29 + (170 * 0.31) + (10 * 0.15));
       });
     });
   });
