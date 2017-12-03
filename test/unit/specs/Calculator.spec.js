@@ -29,7 +29,7 @@ describe('Calculator', () => {
     it('should make a driving/parking calculation', () => {
       const result =
         calculator.calculateCosts(calculator.tariffById('driveNow.mini'), 10, 5, 1);
-      expect(result).to.equal(1 + (0.31 * 10) + (0.15 * 5));
+      expect(result).to.equal(1 + (0.33 * 10) + (0.33 * 5));
     });
 
     describe('Distance fees', () => {
@@ -43,7 +43,7 @@ describe('Calculator', () => {
   describe('DriveNow', () => {
     it('should add the insurance fee of 1 EUR to the cost', () => {
       const result = calculator.calculateCosts(calculator.tariffById('driveNow.mini'), 1, 0, 1);
-      expect(result).to.equal(1 + 0.31);
+      expect(result).to.equal(1 + 0.33);
     });
 
     describe('Hour Packages', () => {
@@ -54,7 +54,7 @@ describe('Calculator', () => {
 
       it('should add minutes that are above the package driving time', () => {
         const result = calculator.calculateCosts(calculator.tariffById('driveNow.mini3hour'), 181, 0, 1);
-        expect(result).to.equal(1 + 29 + 0.31);
+        expect(result).to.equal(1 + 29 + 0.33);
       });
 
       it('should add driving and parking minutes that are above the package time, assuming a drive/park/drive cycle', () => {
@@ -63,7 +63,7 @@ describe('Calculator', () => {
         // Park 20 min (half of which overlaps into extra time)
         // Drive back: 170 min (all are extra time)
         const result = calculator.calculateCosts(calculator.tariffById('driveNow.mini3hour'), 340, 20, 1);
-        expect(result).to.equal(1 + 29 + (170 * 0.31) + (10 * 0.15));
+        expect(result).to.equal(1 + 29 + (170 * 0.33) + (10 * 0.33));
       });
     });
   });
