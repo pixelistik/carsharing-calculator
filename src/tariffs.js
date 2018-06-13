@@ -369,24 +369,11 @@ export default [
   },
   {
     id: 'eddy.scooter',
-    name: 'Eddy E-Roller (Zeittarif)',
+    name: 'Eddy E-Roller',
     drivingPerMinute: 0.19,
     parkingPerMinute: 0.05,
     includedKilometers: 0,
     extraKilometer: 0.0,
-    rentalFee: 0,
-    filterProperties: {
-      Betreiber: 'Eddy',
-      Verleih: 'Free Floating',
-    },
-  },
-  {
-    id: 'eddy.scooter',
-    name: 'Eddy E-Roller (Km-Tarif)',
-    drivingPerMinute: 0,
-    parkingPerMinute: 0.05,
-    includedKilometers: 0,
-    extraKilometer: 0.59,
     rentalFee: 0,
     filterProperties: {
       Betreiber: 'Eddy',
