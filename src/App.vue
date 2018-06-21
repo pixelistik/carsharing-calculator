@@ -30,6 +30,7 @@
       <md-button
         class="md-fab md-fab-bottom-right md-primary filter-button"
         v-on:click="openDialog('filterdialog')"
+        aria-label="Filter"
       >
       </md-button>
       <md-dialog ref="filterdialog">
