@@ -21,7 +21,7 @@
   "dependencies": {
     "lodash": "^4.17.10",
     "vue": "^2.5.16",
-    "vue-material": "^0.7.4"
+    "vue-material": "^0.8.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
