@@ -99,6 +99,13 @@ export default {
 <style src="vue-material/dist/vue-material.css"></style>
 
 <style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+    "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 .md-headline {
   padding: 0 24px;
 }
