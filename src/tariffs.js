@@ -10,6 +10,7 @@ export default [
     filterProperties: {
       Betreiber: 'car2go',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw (2-Sitzer)',
     },
   },
   {
@@ -23,6 +24,7 @@ export default [
     filterProperties: {
       Betreiber: 'car2go',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -36,6 +38,7 @@ export default [
     filterProperties: {
       Betreiber: 'car2go',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -51,6 +54,7 @@ export default [
     filterProperties: {
       Betreiber: 'car2go',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw (2-Sitzer)',
     },
   },
   {
@@ -66,6 +70,7 @@ export default [
     filterProperties: {
       Betreiber: 'car2go',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw (2-Sitzer)',
     },
   },
   {
@@ -81,6 +86,7 @@ export default [
     filterProperties: {
       Betreiber: 'car2go',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw (2-Sitzer)',
     },
   },
   {
@@ -96,6 +102,7 @@ export default [
     filterProperties: {
       Betreiber: 'car2go',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw (2-Sitzer)',
     },
   },
   {
@@ -111,6 +118,7 @@ export default [
     filterProperties: {
       Betreiber: 'car2go',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -126,6 +134,7 @@ export default [
     filterProperties: {
       Betreiber: 'car2go',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -141,6 +150,7 @@ export default [
     filterProperties: {
       Betreiber: 'car2go',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -156,6 +166,7 @@ export default [
     filterProperties: {
       Betreiber: 'car2go',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -171,6 +182,7 @@ export default [
     filterProperties: {
       Betreiber: 'car2go',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -186,6 +198,7 @@ export default [
     filterProperties: {
       Betreiber: 'car2go',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -201,6 +214,7 @@ export default [
     filterProperties: {
       Betreiber: 'car2go',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -216,6 +230,7 @@ export default [
     filterProperties: {
       Betreiber: 'car2go',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -229,6 +244,7 @@ export default [
     filterProperties: {
       Betreiber: 'DriveNow',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -242,6 +258,7 @@ export default [
     filterProperties: {
       Betreiber: 'DriveNow',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -257,6 +274,7 @@ export default [
     filterProperties: {
       Betreiber: 'DriveNow',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -272,6 +290,7 @@ export default [
     filterProperties: {
       Betreiber: 'DriveNow',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -287,6 +306,7 @@ export default [
     filterProperties: {
       Betreiber: 'DriveNow',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -300,6 +320,7 @@ export default [
     filterProperties: {
       Betreiber: 'DriveNow',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -313,6 +334,7 @@ export default [
     filterProperties: {
       Betreiber: 'DriveNow',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -326,6 +348,7 @@ export default [
     filterProperties: {
       Betreiber: 'Flinkster',
       Verleih: 'Stationär',
+      Fahrzeug: 'Pkw (2-Sitzer)',
     },
   },
   {
@@ -339,6 +362,7 @@ export default [
     filterProperties: {
       Betreiber: 'Flinkster',
       Verleih: 'Stationär',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -352,6 +376,7 @@ export default [
     filterProperties: {
       Betreiber: 'Flinkster',
       Verleih: 'Stationär',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -365,6 +390,7 @@ export default [
     filterProperties: {
       Betreiber: 'Flinkster',
       Verleih: 'Stationär',
+      Fahrzeug: 'Pkw',
     },
   },
   {
@@ -378,6 +404,7 @@ export default [
     filterProperties: {
       Betreiber: 'Eddy',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Roller',
     },
   },
   {
@@ -393,6 +420,7 @@ export default [
     filterProperties: {
       Betreiber: 'Eddy',
       Verleih: 'Free Floating',
+      Fahrzeug: 'Roller',
     },
   },
 ];
