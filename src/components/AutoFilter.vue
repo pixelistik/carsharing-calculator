@@ -3,9 +3,7 @@
     <div class="filter--category" v-for="filterCategory in filterCategories">
       <h3 class="filter--category--name">{{ filterCategory.name }}</h3>
       <div class="filter--value" v-for="filterValue in filterCategory.values">
-        <label>
-          <md-checkbox v-model="filterValue.selected" class="md-primary">{{ filterValue.name }}</md-checkbox>
-        </label>
+        <md-checkbox v-model="filterValue.selected" class="md-primary">{{ filterValue.name }}</md-checkbox>
       </div>
     </div>
   </div>
