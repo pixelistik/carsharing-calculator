@@ -31,7 +31,6 @@
         class="md-fab md-fab-bottom-right md-primary filter-button"
         v-on:click="openDialog('filterdialog')"
       >
-        <md-icon>filter_list</md-icon>
       </md-button>
       <md-dialog ref="filterdialog">
         <md-dialog-content>
@@ -108,6 +107,12 @@ body {
 
 .md-headline {
   padding: 0 24px;
+}
+
+.filter-button {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"> <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z" fill="white"/> <path d="M0 0h24v24H0z" fill="none"/> </svg>');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .filter-button.md-fab {
