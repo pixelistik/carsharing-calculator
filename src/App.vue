@@ -7,16 +7,16 @@
       <md-layout md-gutter>
         <form novalidate @submit.stop.prevent="submit">
           <md-input-container>
-            <label>Fahren</label>
-            <md-input type="number" v-model="driving"></md-input>
+            <label for="driving">Fahren</label>
+            <md-input type="number" v-model="driving" id="driving"></md-input>
           </md-input-container>
           <md-input-container>
-            <label>Parken</label>
-            <md-input type="number" v-model="parking"></md-input>
+            <label for="parking">Parken</label>
+            <md-input type="number" v-model="parking" id="parking"></md-input>
           </md-input-container>
           <md-input-container>
-            <label>Kilometer</label>
-            <md-input type="number" v-model="kilometers"></md-input>
+            <label for="kilometers">Kilometer</label>
+            <md-input type="number" v-model="kilometers" id="kilometers"></md-input>
           </md-input-container>
         </form>
       </md-layout>
