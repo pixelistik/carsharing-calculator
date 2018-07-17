@@ -8,15 +8,15 @@
         <form novalidate @submit.stop.prevent="submit">
           <md-input-container>
             <label for="driving">Fahren</label>
-            <md-input type="number" v-model="driving" id="driving"></md-input>
+            <md-input type="number" v-model="driving" id="driving" step="5"></md-input>
           </md-input-container>
           <md-input-container>
             <label for="parking">Parken</label>
-            <md-input type="number" v-model="parking" id="parking"></md-input>
+            <md-input type="number" v-model="parking" id="parking" step="5"></md-input>
           </md-input-container>
           <md-input-container>
             <label for="kilometers">Kilometer</label>
-            <md-input type="number" v-model="kilometers" id="kilometers"></md-input>
+            <md-input type="number" v-model="kilometers" id="kilometers" step="5"></md-input>
           </md-input-container>
         </form>
       </md-layout>
