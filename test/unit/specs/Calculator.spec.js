@@ -20,6 +20,11 @@ describe('Calculator', () => {
     expect(result).to.have.length(28);
   });
 
+  it('should not throw exceptions when tariffs are not set', () => {
+    calculator = Object.create(Calculator);
+    calculator.calculateAllCosts(1, 0, 1);
+  });
+
   describe('Car2Go', () => {
     it('should make a simple driving calculation', () => {
       const result = calculator.calculateCosts(calculator.tariffById('car2go.smart'), 10, 0, 1);
