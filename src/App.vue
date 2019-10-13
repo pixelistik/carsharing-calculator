@@ -73,7 +73,7 @@ export default {
     return {
       driving: 10,
       parking: 5,
-      kilometers: 200,
+      kilometers: 6,
       tariffs,
       filter: () => true,
     };
