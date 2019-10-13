@@ -396,8 +396,8 @@ export default [
   {
     id: 'eddy.scooter',
     name: 'Eddy E-Roller',
-    drivingPerMinute: 0.19,
-    parkingPerMinute: 0.05,
+    drivingPerMinute: 0.23,
+    parkingPerMinute: 0.13,
     includedKilometers: 0,
     extraKilometer: 0.0,
     rentalFee: 0,
@@ -410,12 +410,12 @@ export default [
   {
     id: 'eddy.scooter24hour',
     name: 'Eddy E-Roller 24-Stunden-Tarif',
-    drivingPerMinute: 0.19,
-    parkingPerMinute: 0.05,
+    drivingPerMinute: 0.23,
+    parkingPerMinute: 0.13,
     includedKilometers: 200,
     extraKilometer: 0.29,
     rentalFee: 0,
-    packagePrice: 24,
+    packagePrice: 29,
     packageBudget: 24 * 60,
     filterProperties: {
       Betreiber: 'Eddy',
