@@ -17,7 +17,7 @@ describe('Calculator', () => {
   it('should list all the tariffs', () => {
     const result = calculator.calculateAllCosts(1, 0, 1);
 
-    expect(result).to.have.length(28);
+    expect(result).to.have.length(31);
   });
 
   it('should not throw exceptions when tariffs are not set', () => {

@@ -16,6 +16,6 @@ describe('CostList.vue', () => {
     }).$mount();
 
     expect(vm.$el.querySelectorAll('.tariffs tr')[0].textContent).to.contain('Eddy');
-    expect(vm.$el.querySelectorAll('.tariffs tr')[0].textContent).to.contain('0,24 €');
+    expect(vm.$el.querySelectorAll('.tariffs tr')[0].textContent).to.contain('0,36 €');
   });
 });
