@@ -84,7 +84,7 @@ export default {
             name: collectedCategoryName,
             values: _.uniqBy(collectedCategories[collectedCategoryName].values, 'name'),
           }),
-        );
+      );
     },
   },
 };
