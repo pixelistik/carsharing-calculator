@@ -73,7 +73,7 @@
     "rimraf": "^2.7.1",
     "semver": "^5.7.1",
     "shelljs": "^0.7.6",
-    "sinon": "^2.1.0",
+    "sinon": "^4.5.0",
     "sinon-chai": "^2.8.0",
     "sw-precache-webpack-plugin": "^0.9.1",
     "url-loader": "^0.5.8",
