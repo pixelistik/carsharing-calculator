@@ -72,7 +72,7 @@
     "phantomjs-prebuilt": "^2.1.14",
     "rimraf": "^2.7.1",
     "semver": "^5.7.1",
-    "shelljs": "^0.7.6",
+    "shelljs": "^0.8.4",
     "sinon": "^4.5.0",
     "sinon-chai": "^2.8.0",
     "sw-precache-webpack-plugin": "^1.0.0",
