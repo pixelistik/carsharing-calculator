@@ -24,7 +24,7 @@
     "vue-material": "^0.8.1"
   },
   "devDependencies": {
-    "autoprefixer": "^6.7.2",
+    "autoprefixer": "^9.8.6",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^7.1.5",
