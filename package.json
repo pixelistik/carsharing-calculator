@@ -19,7 +19,7 @@
     "alias": "carsharing-calculator"
   },
   "dependencies": {
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "vue": "^2.6.12",
     "vue-material": "^0.8.1"
   },
