@@ -1,12 +1,20 @@
 <template>
-  <md-layout md-gutter class="cost-list">
+  <md-layout
+    md-gutter
+    class="cost-list"
+  >
     <md-layout md-flex="100">
-      <h2 class="md-headline">Kosten:</h2>
+      <h2 class="md-headline">
+        Kosten:
+      </h2>
     </md-layout>
     <md-layout>
       <md-table class="tariffs">
         <md-table-body>
-          <md-table-row v-for="tariff in costs" v-bind:key="tariff.name">
+          <md-table-row
+            v-for="tariff in costs"
+            :key="tariff.name"
+          >
             <md-table-cell>
               {{ tariff.name }}
             </md-table-cell>
@@ -26,11 +34,17 @@ import Calculator from '@/Calculator';
 const calculator = Object.create(Calculator);
 
 export default {
-  name: 'cost-list',
-  props: ['driving', 'parking', 'kilometers', 'tariffs', 'filter'],
-  created() {
-    calculator.tariffs = this.tariffs;
+  name: 'CostList',
+  filters: {
+    currency(value) {
+      const formattedNumber = value
+        .toFixed(2)
+        .replace('.', ',');
+      // eslint-disable-next-line no-irregular-whitespace
+      return `${formattedNumber} €`; // Unicode NBSP
+    },
   },
+  props: ['driving', 'parking', 'kilometers', 'tariffs', 'filter'],
   data() {
     return {
       msg: 'Welcome to Your Vue.js PWA',
@@ -42,14 +56,8 @@ export default {
         .filter(this.filter);
     },
   },
-  filters: {
-    currency(value) {
-      const formattedNumber = value
-        .toFixed(2)
-        .replace('.', ',');
-      // eslint-disable-next-line no-irregular-whitespace
-      return `${formattedNumber} €`; // Unicode NBSP
-    },
+  created() {
+    calculator.tariffs = this.tariffs;
   },
 };
 </script>

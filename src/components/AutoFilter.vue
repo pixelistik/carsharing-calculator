@@ -1,17 +1,24 @@
 <template>
   <div class="filter">
     <div 
-      class="filter--category" 
       v-for="filterCategory in filterCategories" 
-      v-bind:key="filterCategory.name"
+      :key="filterCategory.name" 
+      class="filter--category"
     >
-      <h3 class="filter--category--name">{{ filterCategory.name }}</h3>
+      <h3 class="filter--category--name">
+        {{ filterCategory.name }}
+      </h3>
       <div 
-        class="filter--value" 
-        v-for="filterValue in filterCategory.values"
-        v-bind:key="filterCategory.name + filterValue"
+        v-for="filterValue in filterCategory.values" 
+        :key="filterCategory.name + filterValue"
+        class="filter--value"
       >
-        <md-checkbox v-model="filterValue.selected" class="md-primary">{{ filterValue.name }}</md-checkbox>
+        <md-checkbox
+          v-model="filterValue.selected"
+          class="md-primary"
+        >
+          {{ filterValue.name }}
+        </md-checkbox>
       </div>
     </div>
   </div>
@@ -21,11 +28,8 @@
 const _ = require('lodash');
 
 export default {
-  name: 'auto-filter',
+  name: 'AutoFilter',
   props: ['items'],
-  created() {
-    this.filterCategories = this.extractFilterCategoriesFromItems();
-  },
   data() {
     return {
       filterCategories: [],
@@ -60,6 +64,9 @@ export default {
       },
       deep: true,
     },
+  },
+  created() {
+    this.filterCategories = this.extractFilterCategoriesFromItems();
   },
   methods: {
     extractFilterCategoriesFromItems() {

@@ -1,61 +1,90 @@
 <template>
   <div id="app">
     <header>
-      <h1 class="md-headline">Carsharing-Kostenrechner</h1>
+      <h1 class="md-headline">
+        Carsharing-Kostenrechner
+      </h1>
     </header>
     <main>
       <md-layout md-gutter>
-        <form novalidate @submit.stop.prevent="submit">
+        <form
+          novalidate
+          @submit.stop.prevent="submit"
+        >
           <md-input-container>
             <label for="driving">Fahren</label>
-            <md-input type="number" v-model="driving" id="driving" step="5"></md-input>
+            <md-input
+              id="driving"
+              v-model="driving"
+              type="number"
+              step="5"
+            />
           </md-input-container>
           <md-input-container>
             <label for="parking">Parken</label>
-            <md-input type="number" v-model="parking" id="parking" step="5"></md-input>
+            <md-input
+              id="parking"
+              v-model="parking"
+              type="number"
+              step="5"
+            />
           </md-input-container>
           <md-input-container>
             <label for="kilometers">Kilometer</label>
-            <md-input type="number" v-model="kilometers" id="kilometers" step="5"></md-input>
+            <md-input
+              id="kilometers"
+              v-model="kilometers"
+              type="number"
+              step="5"
+            />
           </md-input-container>
         </form>
       </md-layout>
       <cost-list
-        v-bind:driving="driving"
-        v-bind:parking="parking"
-        v-bind:kilometers="kilometers"
-        v-bind:tariffs="tariffs"
-        v-bind:filter="filter"
-      ></cost-list>
+        :driving="driving"
+        :parking="parking"
+        :kilometers="kilometers"
+        :tariffs="tariffs"
+        :filter="filter"
+      />
       <md-button
         class="md-fab md-fab-bottom-right md-primary filter-button"
-        v-on:click="openDialog('filterdialog')"
         aria-label="Filter"
-      >
-      </md-button>
+        @click="openDialog('filterdialog')"
+      />
       <md-dialog ref="filterdialog">
         <md-dialog-content>
           <md-dialog-title>Tarife filtern</md-dialog-title>
-          <auto-filter v-bind:items="tariffs" v-on:filterchanged="updateFilter"></auto-filter>
+          <auto-filter
+            :items="tariffs"
+            @filterchanged="updateFilter"
+          />
         </md-dialog-content>
         <md-dialog-actions>
-          <md-button class="md-primary" @click="closeDialog('filterdialog')">Ok</md-button>
+          <md-button
+            class="md-primary"
+            @click="closeDialog('filterdialog')"
+          >
+            Ok
+          </md-button>
         </md-dialog-actions>
       </md-dialog>
     </main>
     <footer>
       <md-card>
         <md-card-header>
-          <div class="md-title">Info:</div>
+          <div class="md-title">
+            Info:
+          </div>
         </md-card-header>
         <md-card-content>
           <p>
-          Alle Angaben ohne Gewähr. Dieser Rechner ist kein Angebot der genannten Carsharing-Betreiber.
-        </p>
-        <p>
-          <a href="http://pixelistik.de/impressum.html">Impressum</a>
-          <a href="https://github.com/pixelistik/carsharing-calculator">Sourcecode</a>
-        </p>
+            Alle Angaben ohne Gewähr. Dieser Rechner ist kein Angebot der genannten Carsharing-Betreiber.
+          </p>
+          <p>
+            <a href="http://pixelistik.de/impressum.html">Impressum</a>
+            <a href="https://github.com/pixelistik/carsharing-calculator">Sourcecode</a>
+          </p>
         </md-card-content>
       </md-card>
     </footer>
@@ -68,7 +97,11 @@ import tariffs from '@/tariffs';
 import AutoFilter from '@/components/AutoFilter';
 
 export default {
-  name: 'app',
+  name: 'App',
+  components: {
+    CostList,
+    AutoFilter,
+  },
   data() {
     return {
       driving: 10,
@@ -77,10 +110,6 @@ export default {
       tariffs,
       filter: () => true,
     };
-  },
-  components: {
-    CostList,
-    AutoFilter,
   },
   methods: {
     updateFilter: function updateFilter(data) {
