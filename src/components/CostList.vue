@@ -6,7 +6,7 @@
     <md-layout>
       <md-table class="tariffs">
         <md-table-body>
-          <md-table-row v-for="tariff in costs" :key="tariff.name">
+          <md-table-row v-for="tariff in costs" v-bind:key="tariff.name">
             <md-table-cell>
               {{ tariff.name }}
             </md-table-cell>

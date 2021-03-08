@@ -1,8 +1,16 @@
 <template>
   <div class="filter">
-    <div class="filter--category" v-for="filterCategory in filterCategories">
+    <div 
+      class="filter--category" 
+      v-for="filterCategory in filterCategories" 
+      v-bind:key="filterCategory.name"
+    >
       <h3 class="filter--category--name">{{ filterCategory.name }}</h3>
-      <div class="filter--value" v-for="filterValue in filterCategory.values">
+      <div 
+        class="filter--value" 
+        v-for="filterValue in filterCategory.values"
+        v-bind:key="filterCategory.name + filterValue"
+      >
         <md-checkbox v-model="filterValue.selected" class="md-primary">{{ filterValue.name }}</md-checkbox>
       </div>
     </div>
@@ -83,7 +91,7 @@ export default {
           ({
             name: collectedCategoryName,
             values: _.uniqBy(collectedCategories[collectedCategoryName].values, 'name'),
-          }),
+          })
       );
     },
   },

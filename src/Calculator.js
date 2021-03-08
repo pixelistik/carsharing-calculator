@@ -35,11 +35,11 @@ const Calculator = {
       kilometersExceedingIncluded = -1 * includedKilometersBudget;
     }
 
-    return tariff.rentalFee +
-      (tariff.packagePrice || 0) +
-      (tariff.drivingPerMinute * drivingExceedingPackage) +
-      (tariff.parkingPerMinute * parkingExceedingPackage) +
-      (tariff.extraKilometer * kilometersExceedingIncluded);
+    return tariff.rentalFee
+      + (tariff.packagePrice || 0)
+      + (tariff.drivingPerMinute * drivingExceedingPackage)
+      + (tariff.parkingPerMinute * parkingExceedingPackage)
+      + (tariff.extraKilometer * kilometersExceedingIncluded);
   },
   calculateAllCosts: function calculateAllCosts(driving, parking, kilometers) {
     const costs = this.tariffs.map((tariff) => {
