@@ -3,8 +3,7 @@
 import Vue from 'vue';
 import App from './App';
 
-const VueMaterial = require('vue-material');
-
+import VueMaterial from 'vue-material';
 Vue.use(VueMaterial);
 
 Vue.config.productionTip = false;
