@@ -34,10 +34,10 @@ describe('AutoFilter.vue', () => {
 
   it('should render the collected categories', () => {
     expect(
-      vm.$el.querySelectorAll('.filter--category .filter--category--name')[0].textContent.trim(),
+      vm.$el.querySelectorAll('.filter--category .filter--category--name')[0].textContent.trim()
     ).to.equal('doors');
     expect(
-      vm.$el.querySelectorAll('.filter--category .filter--category--name')[1].textContent.trim(),
+      vm.$el.querySelectorAll('.filter--category .filter--category--name')[1].textContent.trim()
     ).to.equal('engine');
   });
 
@@ -45,20 +45,20 @@ describe('AutoFilter.vue', () => {
     expect(
       vm.$el
         .querySelectorAll('.filter--category:nth-child(1) .filter--value')[0]
-        .textContent.trim(),
+        .textContent.trim()
     ).to.equal('2');
 
     expect(
       vm.$el
         .querySelectorAll('.filter--category:nth-child(1) .filter--value')[1]
-        .textContent.trim(),
+        .textContent.trim()
     ).to.equal('3');
   });
 
   it('should de-ducplicate the collected value to two unique ones', () => {
     expect(
       vm.$el
-        .querySelectorAll('.filter--category:nth-child(2) .filter--value').length,
+        .querySelectorAll('.filter--category:nth-child(2) .filter--value').length
     ).to.equal(1);
   });
 
@@ -66,7 +66,7 @@ describe('AutoFilter.vue', () => {
     it('should select all values by default', () => {
       expect(
         vm.$el
-          .querySelectorAll('.filter--category:nth-child(1) .filter--value input:checked').length,
+          .querySelectorAll('.filter--category:nth-child(1) .filter--value input:checked').length
       ).to.equal(2);
     });
 
@@ -75,7 +75,7 @@ describe('AutoFilter.vue', () => {
       Vue.nextTick(() => {
         expect(
           vm.$el
-            .querySelectorAll('.filter--category:nth-child(1) .filter--value input:checked').length,
+            .querySelectorAll('.filter--category:nth-child(1) .filter--value input:checked').length
         ).to.equal(1);
         done();
       });
