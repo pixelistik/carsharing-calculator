@@ -1,4 +1,6 @@
 import Vue from 'vue';
+import VueMaterial from 'vue-material';
+Vue.use(VueMaterial);
 import AutoFilter from '@/components/AutoFilter';
 
 describe('AutoFilter.vue', () => {
