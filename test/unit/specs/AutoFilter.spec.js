@@ -66,7 +66,7 @@ describe('AutoFilter.vue', () => {
     it('should select all values by default', () => {
       expect(
         vm.$el
-          .querySelectorAll('.filter--category:nth-child(1) .filter--value input:checked').length
+          .querySelectorAll('.filter--category:nth-child(1) .filter--value .md-checked').length
       ).to.equal(2);
     });
 
@@ -75,7 +75,7 @@ describe('AutoFilter.vue', () => {
       Vue.nextTick(() => {
         expect(
           vm.$el
-            .querySelectorAll('.filter--category:nth-child(1) .filter--value input:checked').length
+            .querySelectorAll('.filter--category:nth-child(1) .filter--value .md-checked').length
         ).to.equal(1);
         done();
       });
