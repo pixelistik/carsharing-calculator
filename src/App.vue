@@ -6,12 +6,12 @@
       </h1>
     </header>
     <main>
-      <md-layout md-gutter>
+      <div class="md-layout md-gutter">
         <form
           novalidate
           @submit.stop.prevent="submit"
         >
-          <md-input-container>
+          <md-field>
             <label for="driving">Fahren</label>
             <md-input
               id="driving"
@@ -19,8 +19,8 @@
               type="number"
               step="5"
             />
-          </md-input-container>
-          <md-input-container>
+          </md-field>
+          <md-field>
             <label for="parking">Parken</label>
             <md-input
               id="parking"
@@ -28,8 +28,8 @@
               type="number"
               step="5"
             />
-          </md-input-container>
-          <md-input-container>
+          </md-field>
+          <md-field>
             <label for="kilometers">Kilometer</label>
             <md-input
               id="kilometers"
@@ -37,9 +37,9 @@
               type="number"
               step="5"
             />
-          </md-input-container>
+          </md-field>
         </form>
-      </md-layout>
+      </div>
       <cost-list
         :driving="driving"
         :parking="parking"

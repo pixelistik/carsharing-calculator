@@ -1,16 +1,12 @@
 <template>
-  <md-layout
-    md-gutter
-    class="cost-list"
-  >
-    <md-layout md-flex="100">
+  <div class="md-layout md-gutter cost-list">
+    <div class="md-layout">
       <h2 class="md-headline">
         Kosten:
       </h2>
-    </md-layout>
-    <md-layout>
+    </div>
+    <div class="md-layout">
       <md-table class="tariffs">
-        <md-table-body>
           <md-table-row
             v-for="tariff in costs"
             :key="tariff.name"
@@ -22,10 +18,9 @@
               {{ tariff.totalCost | currency }}
             </md-table-cell>
           </md-table-row>
-        </md-table-body>
       </md-table>
-    </md-layout>
-  </md-layout>
+    </div>
+  </div>
 </template>
 
 <script>
