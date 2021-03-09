@@ -50,9 +50,9 @@
       <md-button
         class="md-fab md-fab-bottom-right md-primary filter-button"
         aria-label="Filter"
-        @click="openDialog('filterdialog')"
+        @click="toggleFilterDialog"
       />
-      <md-dialog ref="filterdialog">
+      <md-dialog :md-active.sync="showFilterDialog">
         <md-dialog-content>
           <md-dialog-title>Tarife filtern</md-dialog-title>
           <auto-filter
@@ -63,7 +63,7 @@
         <md-dialog-actions>
           <md-button
             class="md-primary"
-            @click="closeDialog('filterdialog')"
+            @click="toggleFilterDialog"
           >
             Ok
           </md-button>
@@ -109,18 +109,16 @@ export default {
       kilometers: 6,
       tariffs,
       filter: () => true,
+      showFilterDialog: false
     };
   },
   methods: {
     updateFilter: function updateFilter(data) {
       this.filter = data;
     },
-    openDialog(ref) {
-      this.$refs[ref].open();
-    },
-    closeDialog(ref) {
-      this.$refs[ref].close();
-    },
+    toggleFilterDialog() {
+      this.showFilterDialog = !this.showFilterDialog;
+    }
   },
 };
 </script>
