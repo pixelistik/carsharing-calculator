@@ -10,7 +10,7 @@
       </h3>
       <div 
         v-for="filterValue in filterCategory.values" 
-        :key="filterCategory.name + filterValue"
+        :key="filterCategory.name + filterValue.name"
         class="filter--value"
       >
         <md-checkbox
