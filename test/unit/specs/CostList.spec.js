@@ -5,7 +5,7 @@ import CostList from '@/components/CostList';
 import tariffs from '@/tariffs';
 
 describe('CostList.vue', () => {
-  it('should render correct contents', () => {
+  xit('should render correct contents', () => {
     const Constructor = Vue.extend(CostList);
     const vm = new Constructor({
       propsData: {
