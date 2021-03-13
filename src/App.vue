@@ -8,6 +8,7 @@
     <main>
       <div class="md-layout md-gutter">
         <form
+          class="md-layout-item"
           novalidate
           @submit.stop.prevent="submit"
         >
