@@ -465,4 +465,46 @@ export default [
       Fahrzeug: 'Transporter',
     },
   },
+  {
+    id: 'greenwheels.up.basic',
+    name: 'greenwheels VW up! (Tarif Basic)',
+    drivingPerMinute: 2.49 / 60,
+    parkingPerMinute: 2.49 / 60,
+    includedKilometers: 0,
+    extraKilometer: 0.30,
+    rentalFee: 0,
+    filterProperties: {
+      Betreiber: 'greenwheels',
+      Verleih: 'Stationär',
+      Fahrzeug: 'Pkw',
+    },
+  },
+  {
+    id: 'greenwheels.up.basic',
+    name: 'greenwheels VW up! (Tarif Komfort)',
+    drivingPerMinute: 1.99 / 60,
+    parkingPerMinute: 1.99 / 60,
+    includedKilometers: 0,
+    extraKilometer: 0.27,
+    rentalFee: 0,
+    filterProperties: {
+      Betreiber: 'greenwheels',
+      Verleih: 'Stationär',
+      Fahrzeug: 'Pkw',
+    },
+  },
+  {
+    id: 'greenwheels.up.basic',
+    name: 'greenwheels VW up! (Tarif Aktiv)',
+    drivingPerMinute: 1.49 / 60,
+    parkingPerMinute: 1.49 / 60,
+    includedKilometers: 0,
+    extraKilometer: 0.24,
+    rentalFee: 0,
+    filterProperties: {
+      Betreiber: 'greenwheels',
+      Verleih: 'Stationär',
+      Fahrzeug: 'Pkw',
+    },
+  }
 ];
