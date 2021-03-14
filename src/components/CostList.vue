@@ -1,5 +1,5 @@
 <template>
-  <div class="md-layout md-gutter cost-list">
+  <div class="md-layout cost-list">
     <div class="md-layout-item">
       <h2 class="md-headline">
         Kosten:

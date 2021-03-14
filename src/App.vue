@@ -6,7 +6,7 @@
       </h1>
     </header>
     <main>
-      <div class="md-layout md-gutter">
+      <div class="md-layout">
         <form
           class="md-layout-item"
           novalidate
