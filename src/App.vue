@@ -8,37 +8,40 @@
     <main>
       <div class="md-layout">
         <form
-          class="md-layout-item"
           novalidate
           @submit.stop.prevent="submit"
         >
-          <md-field>
-            <label for="driving">Fahren</label>
-            <md-input
-              id="driving"
-              v-model="driving"
-              type="number"
-              step="5"
-            />
-          </md-field>
-          <md-field>
-            <label for="parking">Parken</label>
-            <md-input
-              id="parking"
-              v-model="parking"
-              type="number"
-              step="5"
-            />
-          </md-field>
-          <md-field>
-            <label for="kilometers">Kilometer</label>
-            <md-input
-              id="kilometers"
-              v-model="kilometers"
-              type="number"
-              step="5"
-            />
-          </md-field>
+          <md-card class="md-layout-item">
+            <md-card-content>
+              <md-field>
+                <label for="driving">Fahren</label>
+                <md-input
+                  id="driving"
+                  v-model="driving"
+                  type="number"
+                  step="5"
+                />
+              </md-field>
+              <md-field>
+                <label for="parking">Parken</label>
+                <md-input
+                  id="parking"
+                  v-model="parking"
+                  type="number"
+                  step="5"
+                />
+              </md-field>
+              <md-field>
+                <label for="kilometers">Kilometer</label>
+                <md-input
+                  id="kilometers"
+                  v-model="kilometers"
+                  type="number"
+                  step="5"
+                />
+              </md-field>
+            </md-card-content>
+          </md-card>
         </form>
       </div>
       <cost-list
