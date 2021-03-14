@@ -1,5 +1,5 @@
 import Calculator from '@/Calculator';
-import tariffs from '@/tariffs';
+import tariffs from '@/tariffs-test';
 
 describe('Calculator', () => {
   let calculator;

@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueMaterial from 'vue-material';
 Vue.use(VueMaterial);
 import CostList from '@/components/CostList';
-import tariffs from '@/tariffs';
+import tariffs from '@/tariffs-test';
 
 describe('CostList.vue', () => {
   xit('should render correct contents', () => {
