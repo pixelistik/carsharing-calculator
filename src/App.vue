@@ -147,8 +147,4 @@ body {
 .filter-button.md-fab {
   position: fixed;
 }
-
-.md-dialog-container {
-  background-color: #fff;
-}
 </style>
