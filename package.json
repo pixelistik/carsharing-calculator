@@ -53,7 +53,7 @@
     "file-loader": "^2.0.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^3.2.0",
-    "http-proxy-middleware": "^1.1.0",
+    "http-proxy-middleware": "^1.1.2",
     "inject-loader": "^4.0.1",
     "karma": "^6.3.2",
     "karma-coverage": "^2.0.3",
