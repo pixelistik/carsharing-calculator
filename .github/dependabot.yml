@@ -1,0 +1,33 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    timezone: Europe/Berlin
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: http-proxy-middleware
+    versions:
+    - 1.1.1
+    - 1.2.0
+  - dependency-name: sinon
+    versions:
+    - 10.0.0
+    - 9.2.4
+  - dependency-name: vue-loader
+    versions:
+    - 16.1.1
+    - 16.1.2
+  - dependency-name: karma
+    versions:
+    - 6.0.3
+    - 6.0.4
+    - 6.1.0
+    - 6.1.2
+  - dependency-name: chai
+    versions:
+    - 4.3.1
+  - dependency-name: vue-material
+    versions:
+    - 1.0.0
