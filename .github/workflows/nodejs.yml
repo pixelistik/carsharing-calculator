@@ -25,6 +25,8 @@ jobs:
           CI: true
       - name: Deploy app
         if: github.ref == 'refs/heads/master'
+        env:
+          FTP_CREDENTIALS_PWA: ${{ secrets.FTP_CREDENTIALS_PWA }}
         run: |
           sudo apt install -y lftp
           npm run deploy-ftp
