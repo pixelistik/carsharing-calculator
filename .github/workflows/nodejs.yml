@@ -29,6 +29,9 @@ jobs:
     needs: build
     if: github.ref == 'refs/heads/master'
     steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
       - name: Deploy app
         run: |
           sudo apt install -y lftp
