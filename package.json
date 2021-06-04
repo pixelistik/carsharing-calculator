@@ -13,7 +13,8 @@
     "unit:watch": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit/specs",
-    "deploy": "npm run lint && npm run unit && npm run build && now dist/ --public --name carsharing-calculator && now alias"
+    "deploy": "npm run lint && npm run unit && npm run build && now dist/ --public --name carsharing-calculator && now alias",
+    "deploy-ftp": "lftp -e \"set ssl:check-hostname no; mirror --reverse --overwrite --parallel=4 -v dist .; quit;\" ftp://$FTP_CREDENTIALS_PWA@carsharing-calculator.pixelistik.de"
   },
   "now": {
     "alias": "carsharing-calculator"
