@@ -28,5 +28,5 @@ jobs:
         env:
           FTP_CREDENTIALS_PWA: ${{ secrets.FTP_CREDENTIALS_PWA }}
         run: |
-          sudo apt install -y lftp
+          sudo apt-get install --yes --quiet lftp
           npm run deploy-ftp
