@@ -57,7 +57,7 @@
     "http-proxy-middleware": "^2.0.1",
     "inject-loader": "^4.0.1",
     "karma": "^6.3.9",
-    "karma-coverage": "^2.0.3",
+    "karma-coverage": "^2.1.0",
     "karma-mocha": "^2.0.1",
     "karma-phantomjs-launcher": "^1.0.2",
     "karma-phantomjs-shim": "^1.4.0",
