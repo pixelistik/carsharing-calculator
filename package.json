@@ -63,7 +63,7 @@
     "karma-phantomjs-shim": "^1.4.0",
     "karma-sinon-chai": "^2.0.2",
     "karma-sourcemap-loader": "^0.3.8",
-    "karma-spec-reporter": "0.0.32",
+    "karma-spec-reporter": "0.0.33",
     "karma-webpack": "^3.0.5",
     "lolex": "^6.0.0",
     "mocha": "^9.1.3",
