@@ -45,7 +45,7 @@
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-import-resolver-webpack": "^0.13.2",
     "eslint-loader": "^1.7.1",
-    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-html": "^7.1.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-vue": "^9.4.0",
     "eventsource-polyfill": "^0.9.6",
